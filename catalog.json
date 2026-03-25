@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "brand-naming",
+      "name": "Brand Naming",
+      "description": "Use when naming a product, company, feature, or project. Also for rebranding, evaluating name candidates, writing taglines, building brand voice, or running naming workshops.",
+      "version": "1.0.0",
+      "category": "creative",
+      "file": "skills/brand-naming.md"
+    },
+    {
+      "id": "code-review",
+      "name": "Code Review",
+      "description": "Use when reviewing code, pull requests, or diffs. Covers security, performance, readability, and maintainability checks with structured feedback.",
+      "version": "1.0.0",
+      "category": "development",
+      "file": "skills/code-review.md"
+    },
+    {
+      "id": "meeting-notes",
+      "name": "Meeting Notes",
+      "description": "Use when summarizing meetings, extracting action items, writing follow-ups, or organizing discussion points. Produces structured notes from raw conversation.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "file": "skills/meeting-notes.md"
+    }
+  ]
+}
