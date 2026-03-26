@@ -24,6 +24,54 @@
       "version": "1.0.0",
       "category": "productivity",
       "file": "skills/meeting-notes.md"
+    },
+    {
+      "id": "design-luxury",
+      "name": "Design: Luxury",
+      "description": "Design system guidelines for the Luxury style — modern, bold, big headings, dark surface with white text, Oswald typeface. Use when building UI in the luxury style.",
+      "version": "1.0.0",
+      "category": "design",
+      "file": "skills/design-luxury.md"
+    },
+    {
+      "id": "design-refined",
+      "name": "Design: Refined",
+      "description": "Design system guidelines for the Refined style — modern, minimal, clean white surface with Playfair Display typeface and blue/purple accents. Use when building UI in the refined style.",
+      "version": "1.0.0",
+      "category": "design",
+      "file": "skills/design-refined.md"
+    },
+    {
+      "id": "design-dramatic",
+      "name": "Design: Dramatic",
+      "description": "Design system guidelines for the Dramatic style — high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building theatrical, immersive UI.",
+      "version": "1.0.0",
+      "category": "design",
+      "file": "skills/design-dramatic.md"
+    },
+    {
+      "id": "design-bold",
+      "name": "Design: Bold",
+      "description": "Design system guidelines for the Bold style — heavy weight, impactful, dark surface with blue and green accents, Archivo Black typeface. Use when building high-impact UI.",
+      "version": "1.0.0",
+      "category": "design",
+      "file": "skills/design-bold.md"
+    },
+    {
+      "id": "design-bento",
+      "name": "Design: Bento",
+      "description": "Design system guidelines for the Bento style — grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building bento grid layouts.",
+      "version": "1.0.0",
+      "category": "design",
+      "file": "skills/design-bento.md"
+    },
+    {
+      "id": "design-neobrutalism",
+      "name": "Design: Neobrutalism",
+      "description": "Design system guidelines for the Neobrutalism style — raw, high-contrast, bold borders, yellow and deep blue accents on a light surface. Use when building brutalist-inspired UI.",
+      "version": "1.0.0",
+      "category": "design",
+      "file": "skills/design-neobrutalism.md"
     }
   ]
 }
