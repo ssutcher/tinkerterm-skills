@@ -72,6 +72,46 @@
       "version": "1.0.0",
       "category": "design",
       "file": "skills/design-neobrutalism.md"
+    },
+    {
+      "id": "business-strategy",
+      "name": "Business Strategy",
+      "description": "Research-backed strategic co-pilot for startup ideas. Runs parallel research across market, competition, customer, business model, and GTM — synthesizes into an opinionated strategic memo with explicit bets and direction. Use when evaluating a new idea, validating a market, or building a go-to-market strategy from scratch.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/business-strategy.md"
+    },
+    {
+      "id": "persona",
+      "name": "Persona Builder",
+      "description": "Build synthetic personas for business strategy using the JTBD-native framework. Guides segment mapping, community grounding, and collaborative template construction. Produces Sketch, Grounded, or Full tier persona artifacts for use in positioning, messaging, and GTM.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/persona.md"
+    },
+    {
+      "id": "pricing-strategy",
+      "name": "Pricing Strategy",
+      "description": "Research-backed pricing co-pilot for early-stage products. Runs parallel research across competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence — synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model, and pricing narrative.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/pricing-strategy.md"
+    },
+    {
+      "id": "gtm-strategy",
+      "name": "GTM Strategy",
+      "description": "Research-backed go-to-market co-pilot for early-stage startups (0–$1M ARR). Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence — synthesizes into an opinionated GTM Plan with a sequenced first-100-customers plan.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/gtm-strategy.md"
+    },
+    {
+      "id": "simulate",
+      "name": "GTM Simulator",
+      "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation — making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/simulate.md"
     }
   ]
 }
