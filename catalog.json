@@ -18,6 +18,14 @@
       "file": "skills/code-review.md"
     },
     {
+      "id": "pm-e2e",
+      "name": "PM E2E Testing",
+      "description": "Run E2E browser tests against any live or dev web app from a plain English journey description. No codebase required. Use when testing user flows, verifying features, or running ad-hoc journey tests on any web URL.",
+      "version": "1.0.0",
+      "category": "testing",
+      "file": "skills/pm-e2e.md"
+    },
+    {
       "id": "meeting-notes",
       "name": "Meeting Notes",
       "description": "Use when summarizing meetings, extracting action items, writing follow-ups, or organizing discussion points. Produces structured notes from raw conversation.",
