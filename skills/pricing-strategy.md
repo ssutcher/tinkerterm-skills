@@ -478,7 +478,7 @@ The final Pricing Plan should:
 - Have a pricing narrative with 3 "This NOT That" pairs in the brand's voice
 - Have a validation sequence showing what changes at which milestones
 
-**Saving the plan:** `create_bit(type: note, tags: pricing-plan [product-name] pricing-strategy)`
+**Saving the plan:** `create_bit(type: note, project: [product-name], tags: pricing-plan [product-name] pricing-strategy)`
 Include version number and date in the header. Bump version with each substantive revision.
 
 ---

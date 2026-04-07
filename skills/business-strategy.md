@@ -397,8 +397,8 @@ highest-uncertainty areas.
 - Every Open Question resolved or marked as known risk
 - Direction specific enough to act on
 
-**Saving the memo:** Use `create_bit` with `type: strategy-memo` and a project name
-matching the venture. Include the version number and date in the content header.
+**Saving the memo:** `create_bit(type: strategy-memo, project: [product-name])`
+Include the version number and date in the content header.
 
 ---
 

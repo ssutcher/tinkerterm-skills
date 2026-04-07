@@ -258,7 +258,7 @@ At the major branch point, explicitly state the fork and run both paths. Save bo
 the same bit under clearly labeled sections.
 
 **Save the narrative as a bit:**
-- `create_bit(type: simulation, tags: simulation gtm-simulation [product] [horizon])`
+- `create_bit(type: simulation, project: [product], tags: simulation gtm-simulation [product] [horizon])`
 - Title: "[Product] Simulation — [Horizon] — Narrative"
 - Version in content: `Simulation v0.1 | [date]`
 - Include both branches in full
@@ -356,7 +356,7 @@ Re-run after plan updates: /simulate v0.2
 ```
 
 **Save the Findings Report as a separate bit:**
-- `create_bit(type: simulation, tags: simulation findings-report [product] [horizon])`
+- `create_bit(type: simulation, project: [product], tags: simulation findings-report [product] [horizon])`
 - Title: "[Product] Simulation — [Horizon] — Findings Report"
 - This is the bit to share — it contains all findings without the full narrative.
 

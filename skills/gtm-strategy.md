@@ -521,7 +521,7 @@ The final GTM Plan should:
 - Have metrics checkable weekly, not quarterly
 - Have a stage gate telling the founder exactly when they're ready to hire sales
 
-**Saving the plan:** `create_bit(type: note, tags: gtm-plan [product-name])`
+**Saving the plan:** `create_bit(type: note, project: [product-name], tags: gtm-plan [product-name])`
 Include version number and date. Bump version with each substantive revision.
 
 
