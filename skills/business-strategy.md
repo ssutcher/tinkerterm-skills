@@ -210,6 +210,18 @@ time-to-close benchmarks; common GTM mistakes in this space.
 
 ---
 
+### Saving Research (Between Round 1 and Round 2)
+
+After each Round 1 agent completes, save its full output as a bit before passing to
+synthesis:
+
+`create_bit(type: insight, project: [product-name], tags: source-research business-strategy [product-name])`
+
+Start each bit's content with `## [Agent Name] — [Project] Research` so the agent is
+identifiable in search results. Record the bit IDs and pass them to the Round 2 agent.
+
+---
+
 ### Round 2 — After Round 1 Complete
 
 **Agent: Opportunity Assessment (Synthesis)**
@@ -398,7 +410,17 @@ highest-uncertainty areas.
 - Direction specific enough to act on
 
 **Saving the memo:** `create_bit(type: strategy-memo, project: [product-name])`
-Include the version number and date in the content header.
+Include the version number and date in the content header. Include a SOURCE RESEARCH
+section listing the bit IDs of all Round 1 research bits:
+
+```
+SOURCE RESEARCH
+  Problem & Customer: bit [ID]
+  Competitive Landscape: bit [ID]
+  Market & Timing: bit [ID]
+  Business Model: bit [ID]
+  GTM Patterns: bit [ID]
+```
 
 ---
 

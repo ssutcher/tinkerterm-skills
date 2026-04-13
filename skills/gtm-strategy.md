@@ -266,6 +266,18 @@ Find:
 
 ---
 
+### Saving Research (Between Round 1 and Round 2)
+
+After each Round 1 agent completes, save its full output as a bit before passing to
+synthesis:
+
+`create_bit(type: insight, project: [product-name], tags: source-research gtm-strategy [product-name])`
+
+Start each bit's content with `## [Agent Name] — [Project] Research` so the agent is
+identifiable in search results. Record the bit IDs and pass them to the Round 2 agent.
+
+---
+
 ### Round 2 — After Round 1 Complete
 
 **Agent: GTM Synthesis**
@@ -522,7 +534,17 @@ The final GTM Plan should:
 - Have a stage gate telling the founder exactly when they're ready to hire sales
 
 **Saving the plan:** `create_bit(type: note, project: [product-name], tags: gtm-plan [product-name])`
-Include version number and date. Bump version with each substantive revision.
+Include version number and date. Bump version with each substantive revision. Include a
+SOURCE RESEARCH section listing the bit IDs of all Round 1 research bits:
+
+```
+SOURCE RESEARCH
+  Beachhead & Early Adopter: bit [ID]
+  Competitive GTM: bit [ID]
+  First Customer Patterns: bit [ID]
+  Sales Motion: bit [ID]
+  Channel Intelligence: bit [ID]
+```
 
 
 ---

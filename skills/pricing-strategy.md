@@ -252,6 +252,18 @@ Find:
 
 ---
 
+### Saving Research (Between Round 1 and Round 2)
+
+After each Round 1 agent completes, save its full output as a bit before passing to
+synthesis:
+
+`create_bit(type: insight, project: [product-name], tags: source-research pricing-strategy [product-name])`
+
+Start each bit's content with `## [Agent Name] — [Project] Research` so the agent is
+identifiable in search results. Record the bit IDs and pass them to the Round 2 agent.
+
+---
+
 ### Round 2 — After Round 1 Complete
 
 **Agent: Pricing Synthesis**
@@ -480,6 +492,15 @@ The final Pricing Plan should:
 
 **Saving the plan:** `create_bit(type: note, project: [product-name], tags: pricing-plan [product-name] pricing-strategy)`
 Include version number and date in the header. Bump version with each substantive revision.
+Include a SOURCE RESEARCH section listing the bit IDs of all Round 1 research bits:
+
+```
+SOURCE RESEARCH
+  Competitive Price Map: bit [ID]
+  WTP Signals: bit [ID]
+  COGS Benchmarks: bit [ID]
+  Demand-Side Evidence: bit [ID]
+```
 
 ---
 
