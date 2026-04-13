@@ -49,8 +49,8 @@ The Findings Report is what changes the plan.
 - After completing gtm-strategy when the user wants to pressure-test before executing
 
 **Also useful when:**
-- A plan has a key dependency (editorial endorsement, network effect) that needs stress
-  testing before committing
+- A plan has a key dependency (disaster trigger, editorial endorsement, network effect)
+  that needs stress testing before committing
 - A plan is running and you want to compare actual results against simulated trajectory
 - A pivot is being considered — simulate the new path before committing
 
@@ -102,7 +102,7 @@ Two branches at each major dependency:
 
 ## The Three Layers
 
-Simulation output has three distinct layers with different purposes.
+Simulation output has three distinct layers with different purposes and audiences.
 
 ```
 LAYER 1: SIMULATION BRIEF
@@ -122,7 +122,7 @@ LAYER 2: SIMULATION RUN
 
 LAYER 3: FINDINGS REPORT
   What: Structured analysis derived from the narrative
-  Purpose: Primary deliverable — surfaces gaps, broken assumptions, and fixes
+  Purpose: Primary deliverable — surfaces the gaps, broken assumptions, and fixes
   Format: TLDR → Branch Comparison → Metric Scorecard → Gap Log → Assumption
           Tracker → Recommendations → Document Update List
   When: Immediately after Layer 2 completes
@@ -131,8 +131,8 @@ LAYER 3: FINDINGS REPORT
 
 **Why this order matters:** Findings lead. The narrative is rich but long — 50+ action
 blocks for a Year 1 simulation. Printing it inline buries the findings. The Findings
-Report is what changes the plan. The narrative is what you read when you want to understand
-*why* a gap appeared.
+Report is what changes the plan. The narrative is what you read when you want to
+understand *why* a gap appeared.
 
 ---
 
@@ -293,6 +293,7 @@ BRANCH COMPARISON
 Units sold              [X]              [X]
 Revenue                 [X]              [X]
 [Key metric]            [X]              [X]
+[Key metric]            [X]              [X]
 Stage gate met          Month N          Month N
 Year 2 setup            [state]          [state]
 
@@ -330,11 +331,14 @@ ASSUMPTION TRACKER
 ──────────────────────────────────────────────────
 HELD ([N] assumptions confirmed):
   • [assumption] — [evidence from simulation]
+  • [assumption] — [evidence from simulation]
 
 BROKE ([N] assumptions contradicted):
   • [assumption] — [what happened instead]
+  • [assumption] — [what happened instead]
 
 NEVER TESTED ([N] assumptions not reached):
+  • [assumption] — [why the simulation didn't reach this]
   • [assumption] — [why the simulation didn't reach this]
 
 RECOMMENDATIONS
@@ -343,6 +347,9 @@ RECOMMENDATIONS
    [2-3 sentences: what to do and why it matters]
 
 2. [Priority: High] [Title]
+   [2-3 sentences: what to do and why it matters]
+
+3. [Priority: High] [Title]
    [2-3 sentences]
 
 DOCUMENTS TO UPDATE
@@ -367,40 +374,46 @@ When re-running, create new bits for both layers. Don't overwrite. The version t
 ## Key Behaviors
 
 **Findings lead, narrative is reference.** The Findings Report is the primary output.
-Printing the narrative inline buries the findings. Never do this.
+The narrative is what you read when you want to understand *why* a gap appeared, not what
+you read first. Printing the narrative inline buries the findings. Never do this.
 
-**Concrete over abstract.** If the plan says "pitch press," the simulation writes the
-pitch — specific journalist, specific hook, specific ask. Making the action concrete forces
-the question: "can we actually do this?" The fiction is the method.
+**Concrete over abstract.** Simulations that stay abstract reveal nothing. If the plan
+says "pitch press," the simulation writes the pitch — specific journalist, specific hook,
+specific ask. The fiction is the method. Making the action concrete forces the question:
+"can we actually do this?" and "is this the right ask?"
 
-**Realistic friction, not pessimism.** PR pitches have a 10-30% response rate — simulate
-that, not guaranteed failure. Not everyone says yes, not everyone says no.
+**Realistic friction, not pessimism.** The goal isn't to kill the plan. PR pitches have
+a 10-30% response rate in this category — simulate that, not guaranteed failure. Not
+everyone says yes, not everyone says no. The market is busy, not hostile.
 
-**Persona threads are non-negotiable.** If the simulation can't trace how the lead persona
-actually discovers and purchases the product, the GTM plan isn't concrete enough to simulate.
-Surface that as Gap #1.
+**Persona threads are non-negotiable.** If the simulation can't trace how the lead
+persona actually discovers and purchases the product, the GTM plan isn't concrete enough
+to simulate. Surface that as Gap #1 and force the question before running further.
 
 **Gap log priority order matters.** CRITICAL gaps block the plan. HIGH gaps cause
-meaningful delay or revenue loss. MEDIUM gaps reduce efficiency but don't threaten the
-outcome. The distinction tells the founder where to spend the next 48 hours.
+meaningful delay or revenue loss. MEDIUM gaps reduce efficiency but don't threaten
+the outcome. The distinction tells the founder where to spend the next 48 hours.
 
 **Assumptions that break go in the Findings Report, not just the narrative.** If an
-assumption breaks in Month 2, it appears in both the Month 2 action block and the
-Findings Report assumption tracker.
+assumption breaks in Month 2, it should appear in both the Month 2 action block (as a
+gap flag) and the Findings Report assumption tracker (as BROKE). The Findings Report is
+the synthesis; the narrative is the evidence.
 
 **Two inputs define simulation quality:** The precision of the GTM plan's "first 10"
 section and the depth of the persona bits. Sketch-tier personas produce thin simulations.
 If persona depth is insufficient, note it and either proceed with flagged assumptions or
 invoke the persona skill to deepen before running.
 
-**Feed back upstream — specifically.** The Findings Report ends with "Documents to Update"
-naming which bits need edits, which section, and what the specific change is.
-"Update the GTM plan" is not a recommendation. "Add a Year 1 unit target to the Metrics
-section — suggest: 250 = survived, 500 = on track, 800+ = ahead of plan" is.
+**Feed back upstream — specifically.** Don't just output findings. The Findings Report
+ends with a "Documents to Update" block that names which bits need edits, which
+section, and what the specific change is. "Update the GTM plan" is not a recommendation.
+"Add a Year 1 unit target to the GTM plan's Metrics section — suggest: 250 = survived,
+500 = on track, 800+ = ahead of plan" is a recommendation.
 
 **Re-runnable by design.** Simulation → gap found → plan updated → re-simulate.
 Each re-run bumps the version (v0.1 → v0.2) and saves a new bit. The thinking trail
-is preserved.
+is preserved. The Findings Report header references the previous version so changes are
+visible across runs.
 
 ---
 
@@ -438,29 +451,47 @@ simulate           ← Pressure test: concrete execution, realistic friction,
 Updated GTM plan / amended strategy bets / persona refinements
 ```
 
+**Inputs from:** gtm-strategy (plan), persona (journey agents), brand-brief
+(voice/positioning constraints for outreach copy), business-strategy (uncomfortable
+truths, structural risks)
+
+**Feeds back to:** Specific plan edits (gaps surfaced → GTM plan updated), persona
+upgrades (simulation reveals shallow persona understanding → persona skill at Grounded tier),
+strategy memo (assumptions that break in simulation → Strategic Bets section updated)
+
 ---
 
 ## Anti-Patterns
 
-**Printing the narrative inline.** This buries the findings. Never do it.
+**Printing the narrative inline.** This buries the findings in 50+ action blocks. The
+Findings Report exists to fix this. If the narrative is in the conversation, the skill
+is being used wrong.
 
 **The optimistic simulation.** Everything works, all pitches get replies, all buyers
-convert in Month 1. This produces a confidence document, not a stress test.
+convert in Month 1. This produces a confidence document, not a stress test. Explicitly model
+the realistic failure rates.
 
-**The death-spiral simulation.** Everything fails. Also not useful. Model realistic
-friction — some things work, some don't, the founder has to make decisions.
+**The death-spiral simulation.** Everything fails, nothing works, the plan is
+hopeless. Also not useful. Model realistic friction — some things work, some don't,
+the founder has to make decisions.
 
-**Simulating to the plan's level of specificity.** If the plan says "pitch press," go
-one level more concrete. The point is to surface what the plan didn't say.
+**Simulating to the plan's level of specificity.** If the plan says "pitch press," the
+simulation should go one level more concrete. The point is to surface what the plan
+didn't say.
 
 **Stopping at the stage gate.** A 1-year simulation doesn't stop when the first 100
-customers are reached. What happens in Month 9 matters as much as Month 2.
+customers are reached. What happens in Month 9 is as important as what happens in
+Month 2.
 
 **Forgetting the persona threads.** The simulation is about the founder AND the customer.
-The persona's first encounter with the product is the simulation's most important thread.
+The persona's first encounter with the product is the simulation's most important
+thread. Don't let it get crowded out by operational detail.
 
-**Gap log without priority.** A flat list of 13 gaps is overwhelming. CRITICAL / HIGH /
-MEDIUM tells the founder what to fix in the next 48 hours vs. the next month.
+**Gap log without priority.** A flat list of 13 gaps is overwhelming. Priority-ordering
+(CRITICAL / HIGH / MEDIUM) tells the founder what to fix in the next 48 hours vs. the
+next month. Always prioritize.
 
 **Vague "documents to update" section.** "Update the GTM plan" is not actionable.
-"GTM plan Metrics section: add Year 1 unit target — suggest 250/500/800+ tiers" is.
+"GTM plan Section 5 (Stage Gates): add Year 1 unit target — suggest 250/500/800+ tiers"
+is actionable. Every document update should include the specific section and the specific
+change.

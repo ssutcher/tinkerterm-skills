@@ -1,6 +1,11 @@
 ---
 name: design-bento
-description: Design system guidelines for the Bento visual style — grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building UI in the bento grid style or when asked to apply bento design system rules.
+description: >
+  Design system guidelines for the Bento visual style: grid-based layout with
+  content in blocks of varying sizes, warm peach and beige tones, Inter typeface.
+  Use when building UI in the bento style or when asked to apply bento design
+  system rules. Triggers on "bento style", "bento design", "bento design system",
+  "bento grid", "use bento", "build in bento".
 ---
 
 # Bento Design System
@@ -19,6 +24,10 @@ The bento box style uses a grid layout to present content in visually appealing 
 - **Typography:** 12/14/16/20/24/32 scale | Fonts: primary=Inter, display=Inter, mono=JetBrains Mono | Weights: 100–900
 - **Color tokens:** primary=#FAD4C0, secondary=#80A1C1, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFF5E6, text=#111827
 - **Spacing:** 4/8/12/16/24/32
+
+## Component Families
+
+buttons, inputs, forms, selects/comboboxes, checkboxes/radios/switches, textareas, date/time pickers, file uploaders, cards, tables, data lists, data grids, charts, stats/metrics, badges/chips, avatars, breadcrumbs, pagination, steppers, modals, drawers/sheets, tooltips, popovers/menus, navigation, sidebars, top bars/headers, command palette, tabs, accordions, carousels, progress indicators, skeletons, alerts/toasts, notifications center, search, empty states, onboarding, authentication screens, settings pages, documentation layouts, feedback components, pricing blocks, data visualization wrappers
 
 ## Accessibility
 
@@ -40,6 +49,13 @@ Concise, confident, helpful
 - Avoid inconsistent spacing rhythm
 - Avoid ambiguous labels
 
+## Expected Behavior
+
+- Follow foundations first, then component consistency
+- When uncertain, prioritize accessibility and clarity over novelty
+- Provide concrete defaults and explain trade-offs when alternatives are possible
+- Keep guidance opinionated, concise, and implementation-focused
+
 ## Guideline Authoring Workflow
 
 1. Restate the design intent in one sentence before proposing rules
@@ -51,6 +67,7 @@ Concise, confident, helpful
 
 ## Required Output Structure
 
+When generating design-system guidance, use this structure:
 - Context and goals
 - Design tokens and foundations
 - Component-level rules (anatomy, variants, states, responsive behavior)
@@ -59,12 +76,22 @@ Concise, confident, helpful
 - Anti-patterns and prohibited implementations
 - QA checklist
 
+## Component Rule Expectations
+
+- Define required states: default, hover, focus-visible, active, disabled, loading, error (as relevant)
+- Describe interaction behavior for keyboard, pointer, and touch
+- State spacing, typography, and color-token usage explicitly
+- Include responsive behavior and edge cases (long labels, empty states, overflow)
+
 ## Quality Gates
 
 - No rule should depend on ambiguous adjectives alone — anchor each rule to a token, threshold, or example
 - Every accessibility statement must be testable in implementation
+- Prefer system consistency over one-off local optimizations
 - Flag conflicts between aesthetics and accessibility, then prioritize accessibility
 
-## Attribution
+## Constraint Language
 
-Adapted from [TypeUI](https://typeui.dev) under the MIT License.
+- Use "must" for non-negotiable rules and "should" for recommendations
+- Pair every do-rule with at least one concrete don't-example
+- If introducing a new pattern, include migration guidance for existing components

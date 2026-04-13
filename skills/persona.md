@@ -1,7 +1,7 @@
 ---
 name: persona
 description: >
-  Build synthetic personas for business strategy using the JTBD-native framework.
+  Build synthetic personas for business strategy using the JTBD-native persona framework.
   Guides segment mapping, community grounding, and collaborative template construction.
   Produces a complete persona artifact (Sketch, Grounded, or Full tier) for use in
   positioning, messaging, JTBD analysis, UX, and GTM strategy.
@@ -14,7 +14,7 @@ description: >
 ## Purpose
 
 Guide the collaborative construction of synthetic personas using the JTBD-native framework.
-AI brings first drafts of each section, user refines, and we produce a complete persona
+AI brings first drafts of each section, user refines, and we produce a complete persona file
 that's actually usable for strategic work — not just an impressive artifact that sits unread.
 
 ## When to Invoke
@@ -61,7 +61,10 @@ Walk through these in order. Each stage has a checkpoint before moving on.
    - `search_bits(query: "[project name] audience")`
    - `search_bits(query: "[project name] persona")`
 
-3. Surface what we know and what we don't. Be explicit about confidence.
+3. Check if personas already exist for this project:
+   - `search_bits(query: "[project name] persona")`
+
+4. Surface what we know and what we don't. Be explicit about confidence.
 
 **Checkpoint:** "Here's what we know, here's what we don't. Ready to map segments?"
 
@@ -199,6 +202,8 @@ Evidence basis: [X grounded claims from community research / Hypothesis-only]
 
 #### Section 1: The Job Core
 
+Draft these fields:
+
 **Name:** Fictional but demographically grounded. Not "Alex the Privacy Advocate" —
 a real-sounding name that reflects who actually shows up in this buying pattern.
 
@@ -228,15 +233,18 @@ and workarounds. This is the real competitive set.
 
 #### Section 2: The Four Forces
 
+Draft these fields:
+
 **Push:** Specific dissatisfactions with the current situation.
 Concrete and time-stamped where possible. What makes their current life feel unbearable?
 (Verbatim language from community research preferred)
 
 **Pull:** Specific vision of progress. What does the better future look like in their mind?
+What are they imagining when they think about solving this?
 
 **Anxiety:** What's blocking the switch? Fear of failure, learning curve, wrong choice,
-switching cost. Be specific — "fear of wasted money on something that won't work when I
-actually need it" is better than "risk aversion."
+switching cost, fear of looking foolish. Be specific — "fear of wasted money on something
+that won't work when I actually need it" is better than "risk aversion."
 
 **Habit:** What they'd have to give up or unlearn. What inertia is keeping them in place?
 The more elaborate their current workaround, the harder the behavior change being asked.
@@ -252,6 +260,8 @@ Name the current balance: "Right now, anxiety is probably winning because..."
 ---
 
 #### Section 3: The Switch Timeline
+
+Draft these fields:
 
 **First thought:** The earliest moment dissatisfaction registered. Often mundane.
 "Again. This happened again." This seed may have been planted months before active search.
@@ -276,18 +286,23 @@ This directly informs onboarding design.
 
 #### Section 4: The World
 
+This section makes the persona human and stable.
+
 **Narrative backstory (300-500 words for Full, 150-200 for Grounded, 75-100 for Sketch):**
-A real story. Not bullet points. What happened in this person's life that makes this problem
-real to them? What are they trying to build or protect?
-This is the most important field — it's what makes the persona behave consistently when you
-ask strategic questions of it. Write it in third person, present tense.
+A real story. Not bullet points. What happened in this person's life that makes
+this problem real to them? What are they trying to build or protect?
+This is the most important field in the entire template — it's what makes the
+persona behave consistently when you ask strategic questions of it.
+Write it in third person, present tense.
 
 **Day in the life:**
 Where does this problem show up in their actual week? What's happening around it?
+What else is competing for their attention? (IDEO activation method)
 
 **Reference points:**
 What brands, products, or categories do they respect?
-What's their price reference point? What do they use as mental comparison?
+What's their price reference point?
+What do they use as mental comparison?
 
 **Social context:**
 Who do they ask when making decisions like this?
@@ -316,6 +331,8 @@ if you met them?"
 
 **Skip for Sketch tier. Include for Grounded and Full.**
 
+Draft these fields so the persona is immediately usable for strategy work:
+
 **Messaging lead:** What should lead the message for this persona?
 (a) The push — lead with the named problem ("Tired of X?")
 (b) The pull — lead with the vision ("Imagine Y")
@@ -328,13 +345,15 @@ What specifically builds trust for this persona? What instantly destroys it?
 
 **Objection inventory:**
 3-5 specific objections they'll raise + the underlying reason for each.
-(Anxiety-based objections need different handling than habit-based objections)
+(The reason determines the response — anxiety-based objections need different handling
+than habit-based objections)
 
 **Anti-signals:**
 What messaging or product choices would repel this persona even if not obviously harmful?
+(e.g., "enterprise language", "app required", "community-dependent value prop")
 
 **Positioning hook:**
-How the competitive-alternative framing lands for this persona specifically.
+How the Dunford competitive-alternative framing lands for this persona specifically.
 What are they comparing against, and what makes the differentiated value land?
 
 **Hire / fire model:**
@@ -406,7 +425,8 @@ Every non-trivial claim gets Observed / Inferred / Hypothesis.
 A beautifully written persona with no confidence labels is confident fiction.
 
 **The backstory is the most important field.**
-Don't phone it in. A bullet list is not a backstory. A story is a story.
+Don't phone it in. It's what stabilizes the persona when you ask strategic questions of it.
+A bullet list is not a backstory. A story is a story.
 
 **Don't over-build before grounding.**
 For Sketch tier, resist the urge to fill in rich detail. Mark it Hypothesis and move on.

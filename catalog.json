@@ -4,8 +4,8 @@
     {
       "id": "brand-naming",
       "name": "Brand Naming",
-      "description": "Use when naming a product, company, feature, or project. Also for rebranding, evaluating name candidates, writing taglines, building brand voice, or running naming workshops.",
-      "version": "1.0.0",
+      "description": "Research-backed brand naming co-pilot. Generates name candidates using 5 creative lenses, evaluates against Neumeier's 7 criteria and trademark distinctiveness spectrum, and produces a shortlist with domain strategy. Use when naming a product, company, feature, or project.",
+      "version": "2.0.0",
       "category": "creative",
       "file": "skills/brand-naming.md"
     },
@@ -37,7 +37,7 @@
       "id": "design-luxury",
       "name": "Design: Luxury",
       "description": "Design system guidelines for the Luxury style — modern, bold, big headings, dark surface with white text, Oswald typeface. Use when building UI in the luxury style.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "design",
       "file": "skills/design-luxury.md"
     },
@@ -45,7 +45,7 @@
       "id": "design-refined",
       "name": "Design: Refined",
       "description": "Design system guidelines for the Refined style — modern, minimal, clean white surface with Playfair Display typeface and blue/purple accents. Use when building UI in the refined style.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "design",
       "file": "skills/design-refined.md"
     },
@@ -53,7 +53,7 @@
       "id": "design-dramatic",
       "name": "Design: Dramatic",
       "description": "Design system guidelines for the Dramatic style — high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building theatrical, immersive UI.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "design",
       "file": "skills/design-dramatic.md"
     },
@@ -61,7 +61,7 @@
       "id": "design-bold",
       "name": "Design: Bold",
       "description": "Design system guidelines for the Bold style — heavy weight, impactful, dark surface with blue and green accents, Archivo Black typeface. Use when building high-impact UI.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "design",
       "file": "skills/design-bold.md"
     },
@@ -69,7 +69,7 @@
       "id": "design-bento",
       "name": "Design: Bento",
       "description": "Design system guidelines for the Bento style — grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building bento grid layouts.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "design",
       "file": "skills/design-bento.md"
     },
@@ -77,7 +77,7 @@
       "id": "design-neobrutalism",
       "name": "Design: Neobrutalism",
       "description": "Design system guidelines for the Neobrutalism style — raw, high-contrast, bold borders, yellow and deep blue accents on a light surface. Use when building brutalist-inspired UI.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "design",
       "file": "skills/design-neobrutalism.md"
     },
@@ -93,7 +93,7 @@
       "id": "persona",
       "name": "Persona Builder",
       "description": "Build synthetic personas for business strategy using the JTBD-native framework. Guides segment mapping, community grounding, and collaborative template construction. Produces Sketch, Grounded, or Full tier persona artifacts for use in positioning, messaging, and GTM.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "strategy",
       "file": "skills/persona.md"
     },
@@ -117,7 +117,7 @@
       "id": "simulate",
       "name": "GTM Simulator",
       "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation — making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "strategy",
       "file": "skills/simulate.md"
     },
@@ -144,6 +144,38 @@
       "version": "1.0.0",
       "category": "productivity",
       "file": "skills/research.md"
+    },
+    {
+      "id": "pitch",
+      "name": "Pitch",
+      "description": "Narrative synthesis co-pilot that transforms strategy artifacts into compelling stories. Uses Raskin's strategic narrative framework and Duarte's sparkline emotional pacing. Produces a narrative page, shareable one-pager, and tiered talking points (30s / 3min / 10min).",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/pitch.md"
+    },
+    {
+      "id": "brand-brief",
+      "name": "Brand Brief",
+      "description": "Collaborative brand identity construction through a structured 13-section brief. Covers Onliness Statement, voice specification, visual direction, naming territory, and an AI-readable layer. Bridges strategy and execution — receives positioning from business-strategy and feeds brand-naming and visual work.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/brand-brief.md"
+    },
+    {
+      "id": "plan",
+      "name": "Strategic Planning",
+      "description": "Guide strategic thinking sessions before committing to work items. Three-stage process: Frame (define the question), Explore (research and options), Decide (commit with reasoning). Use when facing a decision that deserves structured thinking before action.",
+      "version": "1.0.0",
+      "category": "strategy",
+      "file": "skills/plan.md"
+    },
+    {
+      "id": "a11y",
+      "name": "Accessibility Review",
+      "description": "Accessibility quality review for web applications. Covers semantic HTML, ARIA patterns, keyboard interaction, focus management, and automated testing with axe-core. Use when reviewing UI for WCAG compliance or building accessible components.",
+      "version": "1.0.0",
+      "category": "development",
+      "file": "skills/a11y.md"
     }
   ]
 }

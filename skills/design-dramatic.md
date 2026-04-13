@@ -1,6 +1,11 @@
 ---
 name: design-dramatic
-description: Design system guidelines for the Dramatic visual style — high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building UI in the dramatic style or when asked to apply dramatic design system rules.
+description: >
+  Design system guidelines for the Dramatic visual style: high-contrast,
+  bold, theatrical. Near-black surface with purple and rose accents, Outfit
+  typeface. Use when building UI in the dramatic style or when asked to apply
+  dramatic design system rules. Triggers on "dramatic style", "dramatic design",
+  "dramatic design system", "use dramatic", "build in dramatic".
 ---
 
 # Dramatic Design System
@@ -19,6 +24,10 @@ Dramatic design style is characterized by high-contrast visuals, bold unconventi
 - **Typography:** 12/14/16/20/24/32 scale | Fonts: primary=Outfit, display=Outfit, mono=JetBrains Mono | Weights: 400, 900
 - **Color tokens:** primary=#8B5CF6, secondary=#F43F5E, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#09090B, text=#FAFAFA
 - **Spacing:** 4/8/12/16/24/32
+
+## Component Families
+
+buttons, inputs, forms, selects/comboboxes, checkboxes/radios/switches, textareas, date/time pickers, file uploaders, cards, tables, data lists, data grids, charts, stats/metrics, badges/chips, avatars, breadcrumbs, pagination, steppers, modals, drawers/sheets, tooltips, popovers/menus, navigation, sidebars, top bars/headers, command palette, tabs, accordions, carousels, progress indicators, skeletons, alerts/toasts, notifications center, search, empty states, onboarding, authentication screens, settings pages, documentation layouts, feedback components, pricing blocks, data visualization wrappers
 
 ## Accessibility
 
@@ -40,6 +49,13 @@ Concise, confident, helpful
 - Avoid inconsistent spacing rhythm
 - Avoid ambiguous labels
 
+## Expected Behavior
+
+- Follow foundations first, then component consistency
+- When uncertain, prioritize accessibility and clarity over novelty
+- Provide concrete defaults and explain trade-offs when alternatives are possible
+- Keep guidance opinionated, concise, and implementation-focused
+
 ## Guideline Authoring Workflow
 
 1. Restate the design intent in one sentence before proposing rules
@@ -51,6 +67,7 @@ Concise, confident, helpful
 
 ## Required Output Structure
 
+When generating design-system guidance, use this structure:
 - Context and goals
 - Design tokens and foundations
 - Component-level rules (anatomy, variants, states, responsive behavior)
@@ -59,12 +76,22 @@ Concise, confident, helpful
 - Anti-patterns and prohibited implementations
 - QA checklist
 
+## Component Rule Expectations
+
+- Define required states: default, hover, focus-visible, active, disabled, loading, error (as relevant)
+- Describe interaction behavior for keyboard, pointer, and touch
+- State spacing, typography, and color-token usage explicitly
+- Include responsive behavior and edge cases (long labels, empty states, overflow)
+
 ## Quality Gates
 
 - No rule should depend on ambiguous adjectives alone — anchor each rule to a token, threshold, or example
 - Every accessibility statement must be testable in implementation
+- Prefer system consistency over one-off local optimizations
 - Flag conflicts between aesthetics and accessibility, then prioritize accessibility
 
-## Attribution
+## Constraint Language
 
-Adapted from [TypeUI](https://typeui.dev) under the MIT License.
+- Use "must" for non-negotiable rules and "should" for recommendations
+- Pair every do-rule with at least one concrete don't-example
+- If introducing a new pattern, include migration guidance for existing components

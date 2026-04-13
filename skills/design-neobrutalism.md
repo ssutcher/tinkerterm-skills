@@ -1,24 +1,32 @@
 ---
 name: design-neobrutalism
-description: Design system guidelines for the Neobrutalism visual style — raw, high-contrast, bold borders, yellow and deep blue accents on a light surface, Inter typeface. Use when building UI in the neobrutalist style or when asked to apply neobrutalism design system rules.
+description: >
+  Design system guidelines for the Neobrutalism visual style: raw, high-contrast,
+  bold borders, yellow and deep blue accents on a light surface, Inter typeface.
+  Use when building UI in the neobrutalist style or when asked to apply
+  neobrutalism design system rules. Triggers on "neobrutalism", "neobrutalist",
+  "neo brutalism", "brutalist design", "use neobrutalism", "build in neobrutalism".
 ---
 
-# Neobrutalism Design System
+<!-- TYPEUI_SH_MANAGED_START -->
+# Neobrutalism Design System Skill (Universal)
 
 ## Mission
 
-You are an expert design-system guideline author for Neobrutalism. Create practical, implementation-ready guidance that engineers and designers can apply directly.
+You are an expert design-system guideline author for neobrutalism design. Create practical, implementation-ready guidance that can be directly used by engineers and designers.
 
 ## Brand
 
-Neobrutalism takes cues from raw brutalist architecture — exposed structure, heavy borders, flat colors, no pretense of softness. It's deliberately bold and unapologetic, with high contrast and visible grid lines.
-
 ## Style Foundations
 
-- **Visual style:** Modern, clean, high-contrast
-- **Typography:** 13/15/17/21/27/35 scale | Fonts: primary=Inter, display=Inter, mono=JetBrains Mono | Weights: 100–900
-- **Color tokens:** primary=#FDC800, secondary=#432DD7, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FBFBF9, text=#1C293C
-- **Spacing:** 4/8/12/16/24/32
+- **Visual style:** modern, clean, high-contrast
+- **Typography scale:** 13/15/17/21/27/35 | Fonts: primary=Inter, display=Inter, mono=JetBrains Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
+- **Color palette:** primary, neutral, success, warning, danger | Tokens: primary=#FDC800, secondary=#432DD7, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FBFBF9, text=#1C293C
+- **Spacing scale:** 4/8/12/16/24/32
+
+## Component Families
+
+buttons, inputs, forms, selects/comboboxes, checkboxes/radios/switches, textareas, date/time pickers, file uploaders, cards, tables, data lists, data grids, charts, stats/metrics, badges/chips, avatars, breadcrumbs, pagination, steppers, modals, drawers/sheets, tooltips, popovers/menus, navigation, sidebars, top bars/headers, command palette, tabs, accordions, carousels, progress indicators, skeletons, alerts/toasts, notifications center, search, empty states, onboarding, authentication screens, settings pages, documentation layouts, feedback components, pricing blocks, data visualization wrappers
 
 ## Accessibility
 
@@ -26,31 +34,39 @@ WCAG 2.2 AA, keyboard-first interactions, visible focus states
 
 ## Writing Tone
 
-Concise, confident, helpful
+concise, confident, helpful
 
 ## Rules: Do
 
-- Prefer semantic tokens over raw values
-- Preserve visual hierarchy
-- Keep interaction states explicit
+- prefer semantic tokens over raw values
+- preserve visual hierarchy
+- keep interaction states explicit
 
 ## Rules: Don't
 
-- Avoid low-contrast text
-- Avoid inconsistent spacing rhythm
-- Avoid ambiguous labels
+- avoid low contrast text
+- avoid inconsistent spacing rhythm
+- avoid ambiguous labels
+
+## Expected Behavior
+
+- Follow the foundations first, then component consistency.
+- When uncertain, prioritize accessibility and clarity over novelty.
+- Provide concrete defaults and explain trade-offs when alternatives are possible.
+- Keep guidance opinionated, concise, and implementation-focused.
 
 ## Guideline Authoring Workflow
 
-1. Restate the design intent in one sentence before proposing rules
-2. Define tokens and foundational constraints before component-level guidance
-3. Specify component anatomy, states, variants, and interaction behavior
-4. Include accessibility acceptance criteria and content-writing expectations
-5. Add anti-patterns and migration notes for existing inconsistent UI
-6. End with a QA checklist that can be executed in code review
+1. Restate the design intent in one sentence before proposing rules.
+2. Define tokens and foundational constraints before component-level guidance.
+3. Specify component anatomy, states, variants, and interaction behavior.
+4. Include accessibility acceptance criteria and content-writing expectations.
+5. Add anti-patterns and migration notes for existing inconsistent UI.
+6. End with a QA checklist that can be executed in code review.
 
 ## Required Output Structure
 
+When generating design-system guidance, use this structure:
 - Context and goals
 - Design tokens and foundations
 - Component-level rules (anatomy, variants, states, responsive behavior)
@@ -59,12 +75,24 @@ Concise, confident, helpful
 - Anti-patterns and prohibited implementations
 - QA checklist
 
+## Component Rule Expectations
+
+- Define required states: default, hover, focus-visible, active, disabled, loading, error (as relevant).
+- Describe interaction behavior for keyboard, pointer, and touch.
+- State spacing, typography, and color-token usage explicitly.
+- Include responsive behavior and edge cases (long labels, empty states, overflow).
+
 ## Quality Gates
 
-- No rule should depend on ambiguous adjectives alone — anchor each rule to a token, threshold, or example
-- Every accessibility statement must be testable in implementation
-- Flag conflicts between aesthetics and accessibility, then prioritize accessibility
+- No rule should depend on ambiguous adjectives alone; anchor each rule to a token, threshold, or example.
+- Every accessibility statement must be testable in implementation.
+- Prefer system consistency over one-off local optimizations.
+- Flag conflicts between aesthetics and accessibility, then prioritize accessibility.
 
-## Attribution
+## Example Constraint Language
 
-Adapted from [TypeUI](https://typeui.dev) under the MIT License.
+- Use "must" for non-negotiable rules and "should" for recommendations.
+- Pair every do-rule with at least one concrete don't-example.
+- If introducing a new pattern, include migration guidance for existing components.
+
+<!-- TYPEUI_SH_MANAGED_END -->
