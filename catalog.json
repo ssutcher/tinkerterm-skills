@@ -176,6 +176,14 @@
       "version": "1.0.0",
       "category": "development",
       "file": "skills/a11y.md"
+    },
+    {
+      "id": "design-inspiration",
+      "name": "Design Inspiration",
+      "description": "Find real-world design inspiration for websites, apps, and UI patterns. Searches, curates, and analyzes 5-8 examples with actionable 'steal this' notes and cross-cutting pattern analysis. Generates an interactive dark-themed gallery HTML page with tag filtering and lightbox. Use when the user wants examples of how other sites handle a specific design problem.",
+      "version": "1.0.0",
+      "category": "creative",
+      "file": "skills/design-inspiration.md"
     }
   ]
 }
