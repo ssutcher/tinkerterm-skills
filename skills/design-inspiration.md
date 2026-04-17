@@ -29,7 +29,7 @@ Examples:
 
 ## Workflow
 
-Follow steps 1-5 in order. The curated analysis is what makes this valuable — not a
+Follow steps 1-6 in order. The curated analysis is what makes this valuable — not a
 dump of links.
 
 ### Step 1: Clarify the Ask
@@ -66,9 +66,41 @@ For each site, write:
 
 Also identify **cross-cutting patterns** — what do the best examples have in common? What layout/color/typography patterns recur? What's the dominant approach vs interesting outliers?
 
-### Step 4: Generate Interactive Gallery
+### Step 4: Screenshots (if Playwright available)
 
-Create a self-contained HTML gallery page. Write a `sites.json` data file first, then generate the gallery HTML.
+**Detection:** Run `npx playwright --version` to check if Playwright is installed. If it fails or is not found, skip this step entirely — the gallery will still work with metadata-only cards.
+
+**If Playwright is available**, capture desktop and mobile screenshots for each curated site:
+
+1. Write a small Node.js script to the output directory (`~/Downloads/design-inspo-[topic]-[date]/capture.js`) that:
+   - Launches Chromium via Playwright
+   - For each site URL, captures two screenshots:
+     - **Desktop:** 1440×900 viewport → `01-site-name-desktop.png`
+     - **Mobile:** 390×844 viewport with iPhone UA string → `01-site-name-mobile.png`
+   - Waits for `networkidle` plus a base delay (4000ms default, 8000ms+ if `<canvas>` elements detected)
+   - Dismisses cookie banners and popups between captures using common selectors:
+     - Cookie/consent: buttons matching "Accept All", "Accept Cookies", "Got it", `[class*="cookie"] button`
+     - Promo/newsletter: modal close buttons, "No thanks", "Maybe later", SVG close icons
+     - Runs dismissal up to 3 rounds to catch cascading popups
+
+2. Run the script: `node ~/Downloads/design-inspo-[topic]-[date]/capture.js`
+
+3. Verify each screenshot by reading the PNG files. Retake any that show:
+   - Loading spinners or blank pages
+   - Cookie banners still visible
+   - Popups blocking content
+   - For failed captures, retry with `--wait 12000` or try an alternate URL
+
+4. Add `screenshots` field to each site in `sites.json`:
+   ```json
+   "screenshots": ["01-site-name-desktop.png", "01-site-name-mobile.png"]
+   ```
+
+**If Playwright is NOT available**, skip this step. The `screenshots` field will be absent from `sites.json` and the gallery renders metadata-only cards (still fully functional).
+
+### Step 5: Generate Interactive Gallery
+
+Create a self-contained HTML gallery page. Write a `sites.json` data file first (if not already written in Step 4), then generate the gallery HTML.
 
 **Data file format** (`sites.json`):
 
@@ -82,6 +114,7 @@ Create a self-contained HTML gallery page. Write a `sites.json` data file first,
       "url": "https://example.com",
       "why": "Why this site is relevant",
       "steal": "Specific actionable design pattern to borrow",
+      "screenshots": ["01-site-name-desktop.png", "01-site-name-mobile.png"],
       "tags": ["interactive", "minimal", "dark"]
     }
   ],
@@ -91,18 +124,21 @@ Create a self-contained HTML gallery page. Write a `sites.json` data file first,
 }
 ```
 
+Note: The `screenshots` field is optional. If Step 4 was skipped (no Playwright), omit it.
+
 **Gallery HTML:** Generate a complete, self-contained HTML file with:
 - Dark theme (#0a0a0a background, #e0e0e0 text)
 - Header with topic title, brief, and site count
 - Filter bar with tag buttons (pill-shaped, toggle active state)
 - Card per site: name (linked), URL, why-it's-relevant, steal-this, tags
+- **If screenshots exist:** thumbnail strip per card with clickable lightbox (fullscreen overlay on click, close on Escape/click-outside)
 - Cross-cutting patterns section at bottom
 - Tag filtering via JavaScript (show/hide cards based on data-tags attribute)
 - Responsive layout (single column on mobile)
 
 Save to `~/Downloads/design-inspo-[topic]-[date]/gallery.html` and open in browser.
 
-### Step 5: Brief Summary
+### Step 6: Brief Summary
 
 After opening the gallery, give a 2-3 sentence summary in chat. Don't repeat everything — the gallery is the deliverable. Just highlight the 1-2 most relevant examples and any key insight.
 
