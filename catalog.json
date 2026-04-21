@@ -6,6 +6,7 @@
       "name": "Asana",
       "description": "Guide for managing tasks and projects in Asana. Use when the user asks to create tasks, search Asana, check project status, move tasks between sections, or comment on Asana tasks.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "productivity",
       "file": "skills/asana.md"
     },
@@ -14,6 +15,7 @@
       "name": "Brand Naming",
       "description": "Research-backed brand naming co-pilot. Generates name candidates using 5 creative lenses, evaluates against Neumeier's 7 criteria and trademark distinctiveness spectrum, and produces a shortlist with domain strategy. Use when naming a product, company, feature, or project.",
       "version": "2.0.0",
+      "changelog": "Major rewrite with 5 creative lenses, Neumeier evaluation rubric, and domain strategy",
       "category": "creative",
       "file": "skills/brand-naming.md"
     },
@@ -22,6 +24,7 @@
       "name": "Code Review",
       "description": "Use when reviewing code, pull requests, or diffs. Covers security, performance, readability, and maintainability checks with structured feedback.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "development",
       "file": "skills/code-review.md"
     },
@@ -30,6 +33,7 @@
       "name": "PM E2E Testing",
       "description": "Run E2E browser tests against any live or dev web app from a plain English journey description. No codebase required. Use when testing user flows, verifying features, or running ad-hoc journey tests on any web URL.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "testing",
       "file": "skills/pm-e2e.md"
     },
@@ -38,6 +42,7 @@
       "name": "Meeting Notes",
       "description": "Use when summarizing meetings, extracting action items, writing follow-ups, or organizing discussion points. Produces structured notes from raw conversation.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "productivity",
       "file": "skills/meeting-notes.md"
     },
@@ -46,6 +51,7 @@
       "name": "Design: Luxury",
       "description": "Design system guidelines for the Luxury style — modern, bold, big headings, dark surface with white text, Oswald typeface. Use when building UI in the luxury style.",
       "version": "1.1.0",
+      "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
       "file": "skills/design-luxury.md"
     },
@@ -54,6 +60,7 @@
       "name": "Design: Refined",
       "description": "Design system guidelines for the Refined style — modern, minimal, clean white surface with Playfair Display typeface and blue/purple accents. Use when building UI in the refined style.",
       "version": "1.1.0",
+      "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
       "file": "skills/design-refined.md"
     },
@@ -62,6 +69,7 @@
       "name": "Design: Dramatic",
       "description": "Design system guidelines for the Dramatic style — high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building theatrical, immersive UI.",
       "version": "1.1.0",
+      "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
       "file": "skills/design-dramatic.md"
     },
@@ -70,6 +78,7 @@
       "name": "Design: Bold",
       "description": "Design system guidelines for the Bold style — heavy weight, impactful, dark surface with blue and green accents, Archivo Black typeface. Use when building high-impact UI.",
       "version": "1.1.0",
+      "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
       "file": "skills/design-bold.md"
     },
@@ -78,6 +87,7 @@
       "name": "Design: Bento",
       "description": "Design system guidelines for the Bento style — grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building bento grid layouts.",
       "version": "1.1.0",
+      "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
       "file": "skills/design-bento.md"
     },
@@ -86,6 +96,7 @@
       "name": "Design: Neobrutalism",
       "description": "Design system guidelines for the Neobrutalism style — raw, high-contrast, bold borders, yellow and deep blue accents on a light surface. Use when building brutalist-inspired UI.",
       "version": "1.1.0",
+      "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
       "file": "skills/design-neobrutalism.md"
     },
@@ -94,6 +105,7 @@
       "name": "Business Strategy",
       "description": "Research-backed strategic co-pilot for startup ideas. Runs parallel research across market, competition, customer, business model, and GTM — synthesizes into an opinionated strategic memo with explicit bets and direction. Use when evaluating a new idea, validating a market, or building a go-to-market strategy from scratch.",
       "version": "1.1.0",
+      "changelog": "Improved parallel research workflow and synthesis quality",
       "category": "strategy",
       "file": "skills/business-strategy.md"
     },
@@ -102,6 +114,7 @@
       "name": "Persona Builder",
       "description": "Build synthetic personas for business strategy using the JTBD-native framework. Guides segment mapping, community grounding, and collaborative template construction. Produces Sketch, Grounded, or Full tier persona artifacts for use in positioning, messaging, and GTM.",
       "version": "1.1.0",
+      "changelog": "Added tiered persona artifacts and community grounding step",
       "category": "strategy",
       "file": "skills/persona.md"
     },
@@ -110,6 +123,7 @@
       "name": "Pricing Strategy",
       "description": "Research-backed pricing co-pilot for early-stage products. Runs parallel research across competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence — synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model, and pricing narrative.",
       "version": "1.1.0",
+      "changelog": "Added SKU architecture and margin model to pricing output",
       "category": "strategy",
       "file": "skills/pricing-strategy.md"
     },
@@ -118,6 +132,7 @@
       "name": "GTM Strategy",
       "description": "Research-backed go-to-market co-pilot for early-stage startups (0–$1M ARR). Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence — synthesizes into an opinionated GTM Plan with a sequenced first-100-customers plan.",
       "version": "1.1.0",
+      "changelog": "Added first-100-customers sequencing and channel intelligence",
       "category": "strategy",
       "file": "skills/gtm-strategy.md"
     },
@@ -126,6 +141,7 @@
       "name": "GTM Simulator",
       "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation — making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
       "version": "1.1.0",
+      "changelog": "Improved persona journey tracing and findings report structure",
       "category": "strategy",
       "file": "skills/simulate.md"
     },
@@ -134,6 +150,7 @@
       "name": "Competitive Landscape",
       "description": "Research-backed competitive landscape analysis. Runs parallel research across market players, positioning, product intelligence, momentum signals, and customer voice — synthesizes into a Competitive Landscape Brief with positioning maps, threat scorecards, open space analysis, and moat assessment.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "strategy",
       "file": "skills/competitive-landscape.md"
     },
@@ -142,6 +159,7 @@
       "name": "Threat Analysis",
       "description": "Structured, calibrated threat assessment for personal and family safety. Produces a ThreatIndex score (0-10) with 5-dimensional breakdown, calibrated probability language, and tiered action recommendations. Draws on professional intelligence methodology.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "strategy",
       "file": "skills/threat-analysis.md"
     },
@@ -150,6 +168,7 @@
       "name": "Research",
       "description": "Guide systematic research workflows — check existing knowledge before external searches, state confidence levels, cite sources, and save findings as bits for future reference. Use when researching, investigating, comparing options, or evaluating alternatives.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "productivity",
       "file": "skills/research.md"
     },
@@ -158,6 +177,7 @@
       "name": "Pitch",
       "description": "Narrative synthesis co-pilot that transforms strategy artifacts into compelling stories. Uses Raskin's strategic narrative framework and Duarte's sparkline emotional pacing. Produces a narrative page, shareable one-pager, and tiered talking points (30s / 3min / 10min).",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "strategy",
       "file": "skills/pitch.md"
     },
@@ -166,6 +186,7 @@
       "name": "Brand Brief",
       "description": "Collaborative brand identity construction through a structured 13-section brief. Covers Onliness Statement, voice specification, visual direction, naming territory, and an AI-readable layer. Bridges strategy and execution — receives positioning from business-strategy and feeds brand-naming and visual work.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "strategy",
       "file": "skills/brand-brief.md"
     },
@@ -174,6 +195,7 @@
       "name": "Strategic Planning",
       "description": "Guide strategic thinking sessions before committing to work items. Three-stage process: Frame (define the question), Explore (research and options), Decide (commit with reasoning). Use when facing a decision that deserves structured thinking before action.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "strategy",
       "file": "skills/plan.md"
     },
@@ -182,6 +204,7 @@
       "name": "Accessibility Review",
       "description": "Accessibility quality review for web applications. Covers semantic HTML, ARIA patterns, keyboard interaction, focus management, and automated testing with axe-core. Use when reviewing UI for WCAG compliance or building accessible components.",
       "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "development",
       "file": "skills/a11y.md"
     },
@@ -190,6 +213,7 @@
       "name": "Design Inspiration",
       "description": "Find real-world design inspiration for websites, apps, and UI patterns. Searches, curates, and analyzes 5-8 examples with actionable 'steal this' notes and cross-cutting pattern analysis. Generates an interactive dark-themed gallery HTML page with tag filtering and lightbox. Captures desktop and mobile screenshots with Playwright if available.",
       "version": "1.1.0",
+      "changelog": "Added interactive gallery page, tag filtering, and Playwright screenshots",
       "category": "creative",
       "file": "skills/design-inspiration.md"
     }
