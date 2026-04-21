@@ -2,6 +2,14 @@
   "version": 1,
   "skills": [
     {
+      "id": "asana",
+      "name": "Asana",
+      "description": "Guide for managing tasks and projects in Asana. Use when the user asks to create tasks, search Asana, check project status, move tasks between sections, or comment on Asana tasks.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "file": "skills/asana.md"
+    },
+    {
       "id": "brand-naming",
       "name": "Brand Naming",
       "description": "Research-backed brand naming co-pilot. Generates name candidates using 5 creative lenses, evaluates against Neumeier's 7 criteria and trademark distinctiveness spectrum, and produces a shortlist with domain strategy. Use when naming a product, company, feature, or project.",
