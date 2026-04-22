@@ -12,7 +12,7 @@ description: >
 
 ## When This Applies
 
-User asks you to research, investigate, or evaluate something external — not just read internal code. If the answer is in the codebase, just read the code.
+User asks you to research, investigate, or evaluate something external — not just read internal code. If the answer is in the codebase, just read the code. Always state your confidence level when presenting findings.
 
 ## The Four Rules
 
