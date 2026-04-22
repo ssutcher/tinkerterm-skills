@@ -167,8 +167,8 @@
       "id": "research",
       "name": "Research",
       "description": "Guide systematic research workflows — check existing knowledge before external searches, state confidence levels, cite sources, and save findings as bits for future reference. Use when researching, investigating, comparing options, or evaluating alternatives.",
-      "version": "1.0.1",
-      "changelog": "Added confidence level requirement to findings",
+      "version": "1.0.0",
+      "changelog": "Initial release",
       "category": "productivity",
       "file": "skills/research.md"
     },
