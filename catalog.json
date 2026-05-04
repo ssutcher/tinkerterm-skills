@@ -216,6 +216,15 @@
       "changelog": "Added interactive gallery page, tag filtering, and Playwright screenshots",
       "category": "creative",
       "file": "skills/design-inspiration.md"
+    },
+    {
+      "id": "prototype",
+      "name": "HTML Prototype",
+      "description": "Load before building HTML prototypes, mockups, wireframes, or UI explorations. Contains generation rules that prevent common AI quality issues like generic layouts and slop patterns.",
+      "version": "1.0.0",
+      "changelog": "Initial release",
+      "category": "design",
+      "file": "skills/prototype.md"
     }
   ]
 }
