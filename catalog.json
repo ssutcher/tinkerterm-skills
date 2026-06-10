@@ -49,7 +49,7 @@
     {
       "id": "design-luxury",
       "name": "Design: Luxury",
-      "description": "Design system guidelines for the Luxury style — modern, bold, big headings, dark surface with white text, Oswald typeface. Use when building UI in the luxury style.",
+      "description": "Design system guidelines for the Luxury style \u2014 modern, bold, big headings, dark surface with white text, Oswald typeface. Use when building UI in the luxury style.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -58,7 +58,7 @@
     {
       "id": "design-refined",
       "name": "Design: Refined",
-      "description": "Design system guidelines for the Refined style — modern, minimal, clean white surface with Playfair Display typeface and blue/purple accents. Use when building UI in the refined style.",
+      "description": "Design system guidelines for the Refined style \u2014 modern, minimal, clean white surface with Playfair Display typeface and blue/purple accents. Use when building UI in the refined style.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -67,7 +67,7 @@
     {
       "id": "design-dramatic",
       "name": "Design: Dramatic",
-      "description": "Design system guidelines for the Dramatic style — high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building theatrical, immersive UI.",
+      "description": "Design system guidelines for the Dramatic style \u2014 high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building theatrical, immersive UI.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -76,7 +76,7 @@
     {
       "id": "design-bold",
       "name": "Design: Bold",
-      "description": "Design system guidelines for the Bold style — heavy weight, impactful, dark surface with blue and green accents, Archivo Black typeface. Use when building high-impact UI.",
+      "description": "Design system guidelines for the Bold style \u2014 heavy weight, impactful, dark surface with blue and green accents, Archivo Black typeface. Use when building high-impact UI.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -85,7 +85,7 @@
     {
       "id": "design-bento",
       "name": "Design: Bento",
-      "description": "Design system guidelines for the Bento style — grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building bento grid layouts.",
+      "description": "Design system guidelines for the Bento style \u2014 grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building bento grid layouts.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -94,7 +94,7 @@
     {
       "id": "design-neobrutalism",
       "name": "Design: Neobrutalism",
-      "description": "Design system guidelines for the Neobrutalism style — raw, high-contrast, bold borders, yellow and deep blue accents on a light surface. Use when building brutalist-inspired UI.",
+      "description": "Design system guidelines for the Neobrutalism style \u2014 raw, high-contrast, bold borders, yellow and deep blue accents on a light surface. Use when building brutalist-inspired UI.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -103,7 +103,7 @@
     {
       "id": "business-strategy",
       "name": "Business Strategy",
-      "description": "Research-backed strategic co-pilot for startup ideas. Runs parallel research across market, competition, customer, business model, and GTM — synthesizes into an opinionated strategic memo with explicit bets and direction. Use when evaluating a new idea, validating a market, or building a go-to-market strategy from scratch.",
+      "description": "Research-backed strategic co-pilot for startup ideas. Runs parallel research across market, competition, customer, business model, and GTM \u2014 synthesizes into an opinionated strategic memo with explicit bets and direction. Use when evaluating a new idea, validating a market, or building a go-to-market strategy from scratch.",
       "version": "1.1.0",
       "changelog": "Improved parallel research workflow and synthesis quality",
       "category": "strategy",
@@ -121,7 +121,7 @@
     {
       "id": "pricing-strategy",
       "name": "Pricing Strategy",
-      "description": "Research-backed pricing co-pilot for early-stage products. Runs parallel research across competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence — synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model, and pricing narrative.",
+      "description": "Research-backed pricing co-pilot for early-stage products. Runs parallel research across competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence \u2014 synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model, and pricing narrative.",
       "version": "1.1.0",
       "changelog": "Added SKU architecture and margin model to pricing output",
       "category": "strategy",
@@ -130,7 +130,7 @@
     {
       "id": "gtm-strategy",
       "name": "GTM Strategy",
-      "description": "Research-backed go-to-market co-pilot for early-stage startups (0–$1M ARR). Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence — synthesizes into an opinionated GTM Plan with a sequenced first-100-customers plan.",
+      "description": "Research-backed go-to-market co-pilot for early-stage startups (0\u2013$1M ARR). Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence \u2014 synthesizes into an opinionated GTM Plan with a sequenced first-100-customers plan.",
       "version": "1.1.0",
       "changelog": "Added first-100-customers sequencing and channel intelligence",
       "category": "strategy",
@@ -139,7 +139,7 @@
     {
       "id": "simulate",
       "name": "GTM Simulator",
-      "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation — making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
+      "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation \u2014 making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
       "version": "1.1.0",
       "changelog": "Improved persona journey tracing and findings report structure",
       "category": "strategy",
@@ -148,7 +148,7 @@
     {
       "id": "competitive-landscape",
       "name": "Competitive Landscape",
-      "description": "Research-backed competitive landscape analysis. Runs parallel research across market players, positioning, product intelligence, momentum signals, and customer voice — synthesizes into a Competitive Landscape Brief with positioning maps, threat scorecards, open space analysis, and moat assessment.",
+      "description": "Research-backed competitive landscape analysis. Runs parallel research across market players, positioning, product intelligence, momentum signals, and customer voice \u2014 synthesizes into a Competitive Landscape Brief with positioning maps, threat scorecards, open space analysis, and moat assessment.",
       "version": "1.0.0",
       "changelog": "Initial release",
       "category": "strategy",
@@ -166,7 +166,7 @@
     {
       "id": "research",
       "name": "Research",
-      "description": "Guide systematic research workflows — check existing knowledge before external searches, state confidence levels, cite sources, and save findings as bits for future reference. Use when researching, investigating, comparing options, or evaluating alternatives.",
+      "description": "Guide systematic research workflows \u2014 check existing knowledge before external searches, state confidence levels, cite sources, and save findings as bits for future reference. Use when researching, investigating, comparing options, or evaluating alternatives.",
       "version": "1.0.0",
       "changelog": "Initial release",
       "category": "productivity",
@@ -184,7 +184,7 @@
     {
       "id": "brand-brief",
       "name": "Brand Brief",
-      "description": "Collaborative brand identity construction through a structured 13-section brief. Covers Onliness Statement, voice specification, visual direction, naming territory, and an AI-readable layer. Bridges strategy and execution — receives positioning from business-strategy and feeds brand-naming and visual work.",
+      "description": "Collaborative brand identity construction through a structured 13-section brief. Covers Onliness Statement, voice specification, visual direction, naming territory, and an AI-readable layer. Bridges strategy and execution \u2014 receives positioning from business-strategy and feeds brand-naming and visual work.",
       "version": "1.0.0",
       "changelog": "Initial release",
       "category": "strategy",
@@ -225,6 +225,15 @@
       "changelog": "Initial release",
       "category": "design",
       "file": "skills/prototype.md"
+    },
+    {
+      "id": "publish-skill",
+      "name": "Publish Skill",
+      "description": "Publish one or more skills to the TinkerTerm public skill catalog on GitHub. Use when the user wants to add a skill to the TinkerTerm Library so it appears in the app's Browse Catalog modal. Triggers on \"add to catalog\", \"publish this skill\", \"push to the skill catalog\", \"add to TinkerTerm Library\", \"publish to catalog\".",
+      "version": "1.0.0",
+      "category": "development",
+      "dir": "skills/publish-skill/",
+      "changelog": "Initial entry \u2014 proof of folder-shaped catalog support (Epic 286 Story 004)"
     }
   ]
 }
