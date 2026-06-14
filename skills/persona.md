@@ -17,6 +17,9 @@ Guide the collaborative construction of synthetic personas using the JTBD-native
 AI brings first drafts of each section, user refines, and we produce a complete persona file
 that's actually usable for strategic work — not just an impressive artifact that sits unread.
 
+**Framework reference:** `docs/frameworks/synthetic-persona-framework.txt`
+**Research foundation:** `docs/frameworks/synthetic-persona-research-foundation.txt`
+
 ## When to Invoke
 
 - Building personas for a new or existing project
@@ -26,17 +29,17 @@ that's actually usable for strategic work — not just an impressive artifact th
 
 ## When NOT to Invoke
 
-- Just reading or referencing existing personas — search bits for prior personas
-- Pure market research without persona construction — use the `research` skill
+- Just reading or referencing existing personas — go directly to `docs/personas/`
+- Pure market research without persona construction — use `research` skill
 - Already mid-activation (running VPC, Dunford, etc.) — load the persona and proceed
 
 ---
 
 ## Outputs
 
-**Save with:** `create_bit(type: persona, project: [project-slug])` — use the persona name
-and archetype label as the bit title.
-**Tier label:** Every persona opens with its tier (Sketch / Grounded / Full).
+**Location:** `docs/personas/[project-slug]/[persona-name].txt`
+**Registry:** `docs/personas/REGISTRY.txt` (updated after each persona is created)
+**Tier label:** Every persona file opens with its tier (Sketch / Grounded / Full)
 
 ---
 
@@ -58,11 +61,15 @@ Walk through these in order. Each stage has a checkpoint before moving on.
    - Is there an existing segment hypothesis, or are we starting fresh?
 
 2. Check bits for prior knowledge:
-   - `search_bits(query: "[project name] audience")`
-   - `search_bits(query: "[project name] persona")`
+   ```bash
+   python3 scripts/query-bits.py --search "[project name] audience"
+   python3 scripts/query-bits.py --search "[project name] persona"
+   ```
 
 3. Check if personas already exist for this project:
-   - `search_bits(query: "[project name] persona")`
+   ```bash
+   ls docs/personas/[project-slug]/ 2>/dev/null
+   ```
 
 4. Surface what we know and what we don't. Be explicit about confidence.
 
@@ -74,8 +81,8 @@ Walk through these in order. Each stage has a checkpoint before moving on.
 
 **Goal:** Identify 3-5 distinct buying patterns before building any persona.
 
-The most common mistake is jumping straight to persona construction without agreeing on
-which segments actually matter. Segments first, portraits second.
+The most common mistake is jumping straight to persona construction without
+agreeing on which segments actually matter. Segments first, portraits second.
 
 **AI behavior:**
 1. Draft a hypothesis segment map based on project knowledge + bits.
@@ -366,14 +373,18 @@ Could you write a headline from the messaging lead right now?"
 
 ---
 
-### Saving the Persona
+### Writing the Persona File
 
 After all 5 sections are approved:
 
-1. **Save with:** `create_bit(type: persona, project: [project-slug])`
-   - Bit title: "[Full Name] — [Archetype Label]"
+1. **Create the file:**
+   ```
+   docs/personas/[project-slug]/[persona-slug].txt
+   ```
+   Use lowercase kebab-case for filenames.
+   Example: `docs/personas/songbird/marcus-the-reluctant-prepper.txt`
 
-2. **Bit content structure:**
+2. **File format:**
    ```
    PERSONA: [Full Name] — [Archetype Label]
    PROJECT: [Project name]
@@ -399,11 +410,21 @@ After all 5 sections are approved:
    Next activation step: [specific framework to run next]
    ```
 
-3. **Open** the saved bit with the `open_in_sidekick` tool.
+3. **Update the registry:**
+   ```
+   docs/personas/REGISTRY.txt
+   ```
+   Add: project, persona name, tier, date, archetype label, activation stage reached.
 
-4. **Confirm:**
+4. **Open in sidekick:**
+   ```bash
+   curl -s "http://127.0.0.1:${TTERM_IPC_PORT}/sidekick?target=docs/personas/[project]/[file].txt&session=$TTERM_SESSION_ID"
+   ```
+
+5. **Confirm:**
    ```
    ✅ Persona created: [Name] — [Archetype]
+   Location: docs/personas/[project]/[file].txt
    Tier: [Tier]
    Grounded claims: [N]
    Hypothesis claims: [N]
@@ -433,8 +454,8 @@ For Sketch tier, resist the urge to fill in rich detail. Mark it Hypothesis and 
 Depth without evidence is just elaborate assumption.
 
 **The disconfirmation pass is mandatory.**
-If community research was done, actively search for contradicting evidence before writing
-Observed claims. "I didn't notice any contradictions" is not the pass.
+If community research was done, actively search for contradicting evidence before
+writing Observed claims. "I didn't notice any contradictions" is not the pass.
 
 **Honor the collaborative model.**
 AI brings first drafts. User might rewrite entirely — that's the point.

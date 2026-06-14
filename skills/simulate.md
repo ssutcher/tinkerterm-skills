@@ -1,7 +1,7 @@
 ---
 name: simulate
 description: >
-  GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief
+  GTM and business simulation engine. Takes a GTM plan, persona files, and brand brief
   and runs a time-horizon simulation — making plan actions concrete, modeling realistic
   market responses, tracing persona journeys, surfacing gaps and broken assumptions.
   Runs two branches at key dependencies (e.g., disaster event / no disaster event).
@@ -25,11 +25,11 @@ through the plan's touchpoints.
 The output is: here's where the plan is underspecified, here's where the assumptions
 held, here's where they broke, here's what to fix.
 
-**Distinct from gtm-strategy:** GTM strategy writes the plan. Simulate executes it
+**Distinct from /gtm-strategy:** GTM strategy writes the plan. Simulate executes it
 against reality and finds what the plan missed. Simulation is what you do after the plan
 is written, before you commit resources.
 
-**Distinct from business-strategy:** Strategy answers "is this a real opportunity?"
+**Distinct from /business-strategy:** Strategy answers "is this a real opportunity?"
 Simulation answers "if we actually execute this plan, what happens week by week?"
 
 **The value is in the gap log, not the narrative.** The narrative is reference material.
@@ -45,8 +45,10 @@ The Findings Report is what changes the plan.
 - "stress test the plan"
 - "play this out"
 - "what would actually happen if we..."
-- "simulate year 1", "what does year 1 look like"
-- After completing gtm-strategy when the user wants to pressure-test before executing
+- "simulate year 1"
+- "what does year 1 look like"
+- After completing /gtm-strategy when the user wants to pressure-test before executing
+- /simulate
 
 **Also useful when:**
 - A plan has a key dependency (disaster trigger, editorial endorsement, network effect)
@@ -56,8 +58,8 @@ The Findings Report is what changes the plan.
 
 **When NOT to invoke:**
 - Quick "what if" questions — just answer them directly
-- Plans without a first-customer path — need that first (gtm-strategy)
-- When the user explicitly wants research, not simulation
+- Plans without a first-customer path — need that first (/gtm-strategy)
+- When the user explicitly says they want research, not simulation
 
 ---
 
@@ -87,8 +89,8 @@ simulation window, what external events affect the plan.
 ### Time Model
 
 Discrete phases aligned to the GTM plan's stage gates. Within each phase, time is
-tracked at week-level resolution where relevant (pitch emails, decision cycles, press lead
-times) and month-level where appropriate (revenue trajectory, channel trends).
+tracked at week-level resolution where relevant (pitch emails, HOA decision cycles,
+press lead times) and month-level where appropriate (revenue trajectory, channel trends).
 
 ### Uncertainty Model
 
@@ -138,11 +140,11 @@ understand *why* a gap appeared.
 
 ## Layer 1: Simulation Brief
 
-**Load inputs using search_bits or ask the user for bit references:**
-- GTM plan: `search_bits(query: "gtm-plan [product]")`
-- Lead persona: `search_bits(query: "persona [product]")`
-- Brand brief: `search_bits(query: "brand-brief [product]")`
-- Strategic memo: `search_bits(query: "strategic-memo [product]")`
+**Load from bits/files:**
+- GTM plan (bit reference or inline)
+- Lead persona file(s)
+- Brand brief AI-readable layer
+- Strategic memo (for uncomfortable truths and structural risks)
 
 **Extract and state explicitly:**
 - Key actions (in order)
@@ -166,7 +168,7 @@ INPUTS
 Product:           [name, SKUs, prices]
 Time horizon:      Month 0 through Month N
 Plan version:      GTM Plan vX.X (bit [ID])
-Persona bits:      [bit IDs or titles]
+Persona files:     [paths]
 Brand brief:       bit [ID]
 Strategic memo:    bit [ID]
 ────────────────────────────────────────────────────────────
@@ -230,7 +232,7 @@ PERSONA THREAD:
 whether the plan's actions have reached them yet, what they're doing instead.]
 
 METRICS:
-[Units sold: X | [relevant metric]: X | Revenue: $X]
+[Units sold: X | 4-pack ratio: X% | [relevant metric]: X | Revenue: $X]
 
 GAP FLAGGED (if any):
 [What the plan left unspecified that became load-bearing at this step.]
@@ -258,18 +260,21 @@ At the major branch point, explicitly state the fork and run both paths. Save bo
 the same bit under clearly labeled sections.
 
 **Save the narrative as a bit:**
-- `create_bit(type: simulation, project: [product], tags: simulation gtm-simulation [product] [horizon])`
-- Title: "[Product] Simulation — [Horizon] — Narrative"
-- Version in content: `Simulation v0.1 | [date]`
+- `TYPE: simulation`
+- `CLUSTER:` [relevant product cluster]
+- `TAGS: simulation, gtm-simulation, [product], [year-1 or relevant horizon]`
+- Version field in content: `Simulation v0.1 | [date]`
 - Include both branches in full
 
-Print the bit ID when saved.
+Print the bit ID when saved. This is the reference for anyone who wants to read the
+full narrative — include it in the Findings Report header.
 
 ---
 
 ## Layer 3: Findings Report
 
-The primary inline output. Print immediately after "Simulation complete."
+The primary inline output. This is what the conversation shows after the simulation
+completes. Print immediately after "Simulation complete."
 
 **Format:**
 
@@ -362,13 +367,6 @@ Full narrative → bit [ID]
 Re-run after plan updates: /simulate v0.2
 ```
 
-**Save the Findings Report as a separate bit:**
-- `create_bit(type: simulation, project: [product], tags: simulation findings-report [product] [horizon])`
-- Title: "[Product] Simulation — [Horizon] — Findings Report"
-- This is the bit to share — it contains all findings without the full narrative.
-
-When re-running, create new bits for both layers. Don't overwrite. The version trail matters.
-
 ---
 
 ## Key Behaviors
@@ -400,12 +398,12 @@ gap flag) and the Findings Report assumption tracker (as BROKE). The Findings Re
 the synthesis; the narrative is the evidence.
 
 **Two inputs define simulation quality:** The precision of the GTM plan's "first 10"
-section and the depth of the persona bits. Sketch-tier personas produce thin simulations.
+section and the depth of the persona files. Sketch-tier personas produce thin simulations.
 If persona depth is insufficient, note it and either proceed with flagged assumptions or
-invoke the persona skill to deepen before running.
+invoke /persona to deepen before running.
 
 **Feed back upstream — specifically.** Don't just output findings. The Findings Report
-ends with a "Documents to Update" block that names which bits need edits, which
+ends with a "Documents to Update" block that names which documents need edits, which
 section, and what the specific change is. "Update the GTM plan" is not a recommendation.
 "Add a Year 1 unit target to the GTM plan's Metrics section — suggest: 250 = survived,
 500 = on track, 800+ = ahead of plan" is a recommendation.
@@ -423,26 +421,27 @@ visible across runs.
 stage gate).
 
 **Extended options:**
-- "Year 1" — T=0 through Month 12, including post-stage-gate scaling
+- "Year 1" — from T=0 through Month 12, including post-stage-gate scaling
 - "Year 2" — through Month 24, including bowling pin expansion
-- "To $1M ARR" — runs until the revenue milestone is reached or the simulation reveals
-  it can't be reached on the current plan
+- "To $1M ARR" — runs until the revenue milestone is reached or the simulation
+  reveals it can't be reached on the current plan
 
-When the horizon extends beyond the GTM plan's defined scope, the simulation flags what
-the plan leaves underspecified in the extended window before proceeding.
+When the time horizon extends beyond the GTM plan's defined scope, the simulation
+identifies what the plan leaves underspecified in that extended window and flags it
+explicitly in the Simulation Brief before proceeding.
 
 ---
 
 ## Ecosystem Position
 
 ```
-business-strategy  → Strategic Memo + Onliness Statement
-persona            → Persona bits with JTBD + Four Forces
-brand-brief        → Brand Brief bit with AI-Readable Layer
-gtm-strategy       → GTM Plan with First 100 + Stage Gates
+/business-strategy  → Strategic Memo + Onliness Statement
+/persona            → Persona files with JTBD + Four Forces
+/brand-brief        → Brand Brief with AI-Readable Layer
+/gtm-strategy       → GTM Plan with First 100 + Stage Gates
         ↓
-simulate           ← Pressure test: concrete execution, realistic friction,
-                      persona journeys, gap surfacing
+/simulate           ← Pressure test: concrete execution, realistic friction,
+                       persona journeys, gap surfacing
         ↓
         Layer 1: Simulation Brief (confirm inputs)
         Layer 2: Simulation Run → saved to bit
@@ -451,13 +450,34 @@ simulate           ← Pressure test: concrete execution, realistic friction,
 Updated GTM plan / amended strategy bets / persona refinements
 ```
 
-**Inputs from:** gtm-strategy (plan), persona (journey agents), brand-brief
-(voice/positioning constraints for outreach copy), business-strategy (uncomfortable
+**Inputs from:** /gtm-strategy (plan), /persona (journey agents), /brand-brief
+(voice/positioning constraints for outreach copy), /business-strategy (uncomfortable
 truths, structural risks)
 
 **Feeds back to:** Specific plan edits (gaps surfaced → GTM plan updated), persona
-upgrades (simulation reveals shallow persona understanding → persona skill at Grounded tier),
+upgrades (simulation reveals shallow persona understanding → /persona at Grounded tier),
 strategy memo (assumptions that break in simulation → Strategic Bets section updated)
+
+---
+
+## Saving Simulation Output
+
+**Layer 2 (narrative)** saves as a bit:
+- `TYPE: simulation`
+- `CLUSTER:` [relevant product cluster]
+- `TAGS: simulation, gtm-simulation, [product], [year-1 or relevant horizon]`
+- Version in content: `Simulation v0.1 | [date]`
+- Include both branches in full
+
+**Layer 3 (Findings Report)** saves as a separate bit:
+- `TYPE: simulation`
+- `CLUSTER:` [relevant product cluster]
+- `TAGS: simulation, findings-report, [product], [year-1 or relevant horizon]`
+- Reference to Layer 2 narrative bit ID in content
+- This is the bit to share — it contains all findings without the full narrative
+
+When re-running, create new bits for both layers. Don't overwrite. The version trail
+matters.
 
 ---
 
@@ -467,8 +487,8 @@ strategy memo (assumptions that break in simulation → Strategic Bets section u
 Findings Report exists to fix this. If the narrative is in the conversation, the skill
 is being used wrong.
 
-**The optimistic simulation.** Everything works, all pitches get replies, all buyers
-convert in Month 1. This produces a confidence document, not a stress test. Explicitly model
+**The optimistic simulation.** Everything works, all pitches get replies, all HOAs buy
+in Month 1. This produces a confidence document, not a stress test. Explicitly model
 the realistic failure rates.
 
 **The death-spiral simulation.** Everything fails, nothing works, the plan is
@@ -484,7 +504,7 @@ customers are reached. What happens in Month 9 is as important as what happens i
 Month 2.
 
 **Forgetting the persona threads.** The simulation is about the founder AND the customer.
-The persona's first encounter with the product is the simulation's most important
+Marcus & Priya's first encounter with the product is the simulation's most important
 thread. Don't let it get crowded out by operational detail.
 
 **Gap log without priority.** A flat list of 13 gaps is overwhelming. Priority-ordering

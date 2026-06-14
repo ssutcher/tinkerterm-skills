@@ -104,8 +104,8 @@
       "id": "business-strategy",
       "name": "Business Strategy",
       "description": "Research-backed strategic co-pilot for startup ideas. Runs parallel research across market, competition, customer, business model, and GTM \u2014 synthesizes into an opinionated strategic memo with explicit bets and direction. Use when evaluating a new idea, validating a market, or building a go-to-market strategy from scratch.",
-      "version": "1.1.0",
-      "changelog": "Improved parallel research workflow and synthesis quality",
+      "version": "1.2.0",
+      "changelog": "Substantial expansion of research-and-synthesis workflow; sharper opinionated memo template with explicit bets.",
       "category": "strategy",
       "file": "skills/business-strategy.md"
     },
@@ -113,8 +113,8 @@
       "id": "persona",
       "name": "Persona Builder",
       "description": "Build synthetic personas for business strategy using the JTBD-native framework. Guides segment mapping, community grounding, and collaborative template construction. Produces Sketch, Grounded, or Full tier persona artifacts for use in positioning, messaging, and GTM.",
-      "version": "1.1.0",
-      "changelog": "Added tiered persona artifacts and community grounding step",
+      "version": "1.2.0",
+      "changelog": "Refinements to JTBD-native template and community-grounding step.",
       "category": "strategy",
       "file": "skills/persona.md"
     },
@@ -122,8 +122,8 @@
       "id": "pricing-strategy",
       "name": "Pricing Strategy",
       "description": "Research-backed pricing co-pilot for early-stage products. Runs parallel research across competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence \u2014 synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model, and pricing narrative.",
-      "version": "1.1.0",
-      "changelog": "Added SKU architecture and margin model to pricing output",
+      "version": "1.2.0",
+      "changelog": "Expanded WTP/COGS/demand research stages; richer SKU architecture and pricing-narrative output.",
       "category": "strategy",
       "file": "skills/pricing-strategy.md"
     },
@@ -131,8 +131,8 @@
       "id": "gtm-strategy",
       "name": "GTM Strategy",
       "description": "Research-backed go-to-market co-pilot for early-stage startups (0\u2013$1M ARR). Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence \u2014 synthesizes into an opinionated GTM Plan with a sequenced first-100-customers plan.",
-      "version": "1.1.0",
-      "changelog": "Added first-100-customers sequencing and channel intelligence",
+      "version": "1.2.0",
+      "changelog": "Expanded beachhead/competitive-GTM/first-customer/channel research; tighter first-100-customers sequencing.",
       "category": "strategy",
       "file": "skills/gtm-strategy.md"
     },
@@ -140,8 +140,8 @@
       "id": "simulate",
       "name": "GTM Simulator",
       "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation \u2014 making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
-      "version": "1.1.0",
-      "changelog": "Improved persona journey tracing and findings report structure",
+      "version": "1.2.0",
+      "changelog": "Tightened branch-comparison and findings-report structure; clearer assumption tracker.",
       "category": "strategy",
       "file": "skills/simulate.md"
     },
@@ -149,8 +149,8 @@
       "id": "competitive-landscape",
       "name": "Competitive Landscape",
       "description": "Research-backed competitive landscape analysis. Runs parallel research across market players, positioning, product intelligence, momentum signals, and customer voice \u2014 synthesizes into a Competitive Landscape Brief with positioning maps, threat scorecards, open space analysis, and moat assessment.",
-      "version": "1.0.0",
-      "changelog": "Initial release",
+      "version": "1.1.0",
+      "changelog": "Major expansion: deeper parallel research (players, positioning, momentum signals, customer voice), richer threat scorecards and moat assessment, expanded synthesis stage.",
       "category": "strategy",
       "file": "skills/competitive-landscape.md"
     },
@@ -158,8 +158,8 @@
       "id": "threat-analysis",
       "name": "Threat Analysis",
       "description": "Structured, calibrated threat assessment for personal and family safety. Produces a ThreatIndex score (0-10) with 5-dimensional breakdown, calibrated probability language, and tiered action recommendations. Draws on professional intelligence methodology.",
-      "version": "1.0.0",
-      "changelog": "Initial release",
+      "version": "1.1.0",
+      "changelog": "Substantial expansion: more rigorous 5-dimension scoring, more calibrated probability language, expanded tiered action recommendations.",
       "category": "strategy",
       "file": "skills/threat-analysis.md"
     },
@@ -176,8 +176,8 @@
       "id": "pitch",
       "name": "Pitch",
       "description": "Narrative synthesis co-pilot that transforms strategy artifacts into compelling stories. Uses Raskin's strategic narrative framework and Duarte's sparkline emotional pacing. Produces a narrative page, shareable one-pager, and tiered talking points (30s / 3min / 10min).",
-      "version": "1.0.0",
-      "changelog": "Initial release",
+      "version": "1.1.0",
+      "changelog": "Expanded Raskin + Duarte synthesis stages; richer one-pager and tiered talking-points output.",
       "category": "strategy",
       "file": "skills/pitch.md"
     },
@@ -185,8 +185,8 @@
       "id": "brand-brief",
       "name": "Brand Brief",
       "description": "Collaborative brand identity construction through a structured 13-section brief. Covers Onliness Statement, voice specification, visual direction, naming territory, and an AI-readable layer. Bridges strategy and execution \u2014 receives positioning from business-strategy and feeds brand-naming and visual work.",
-      "version": "1.0.0",
-      "changelog": "Initial release",
+      "version": "1.1.0",
+      "changelog": "Refined 13-section brief structure with tighter Onliness Statement and voice specification.",
       "category": "strategy",
       "file": "skills/brand-brief.md"
     },
@@ -212,8 +212,8 @@
       "id": "design-inspiration",
       "name": "Design Inspiration",
       "description": "Find real-world design inspiration for websites, apps, and UI patterns. Searches, curates, and analyzes 5-8 examples with actionable 'steal this' notes and cross-cutting pattern analysis. Generates an interactive dark-themed gallery HTML page with tag filtering and lightbox. Captures desktop and mobile screenshots with Playwright if available.",
-      "version": "1.1.0",
-      "changelog": "Added interactive gallery page, tag filtering, and Playwright screenshots",
+      "version": "1.2.0",
+      "changelog": "Refined gallery generation and pattern-analysis output.",
       "category": "creative",
       "file": "skills/design-inspiration.md"
     },
@@ -234,6 +234,24 @@
       "category": "development",
       "dir": "skills/publish-skill/",
       "changelog": "Initial entry \u2014 proof of folder-shaped catalog support (Epic 286 Story 004)"
+    },
+    {
+      "id": "ui-build",
+      "name": "UI Build (Figma \u2192 Code)",
+      "description": "Figma \u2192 HTML/CSS/React implementation workflow. Use when translating a Figma design into working code. Enforces the right order: read the design spec first, then map to design tokens, then build. Pairs with ui-verify.",
+      "version": "1.0.0",
+      "changelog": "Initial release \u2014 Figma-to-code build workflow.",
+      "category": "development",
+      "file": "skills/ui-build.md"
+    },
+    {
+      "id": "ui-verify",
+      "name": "UI Verify (Figma \u2192 Code)",
+      "description": "Visual verification for Figma \u2192 HTML/CSS/React work. Use after any visual change. Enforces checking code against the Figma spec AND screenshots against the design, across both viewports, before declaring done. Pairs with ui-build.",
+      "version": "1.0.0",
+      "changelog": "Initial release \u2014 Figma-to-code visual verification workflow.",
+      "category": "development",
+      "file": "skills/ui-verify.md"
     }
   ]
 }

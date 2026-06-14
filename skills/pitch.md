@@ -5,12 +5,13 @@ description: >
   that make people excited about an idea. Consumes whatever upstream strategy outputs exist
   (Strategic Memo, Personas, GTM Plan, Brand Brief, Pricing, Simulations) and synthesizes
   a pitch narrative using Raskin's strategic narrative framework and Duarte's sparkline
-  emotional pacing. Produces three artifacts: a primary narrative document (with section
-  markers), a shareable one-pager, and tiered talking points (30s / 3min / 10min). Works
-  with whatever exists — a pitch from just a Strategic Memo is still a pitch. The skill's
-  job is to answer "why should anyone care about this?" Triggers on: "write the pitch",
-  "pitch this", "make people excited about this", "create a pitch", "write the narrative",
-  "how do we tell this story", "elevator pitch", "one-pager", /pitch.
+  emotional pacing. Produces three artifacts: a primary scrollytelling narrative (with
+  section markers for strategy-site rendering), a shareable one-pager, and tiered talking
+  points (30s / 3min / 10min). Works with whatever exists — a pitch from just a Strategic
+  Memo is still a pitch. The skill's job is to answer "why should anyone care about this?"
+  Triggers on: "write the pitch", "pitch this", "make people excited about this",
+  "create a pitch", "write the narrative", "how do we tell this story", "I need to
+  explain this to someone", "elevator pitch", "one-pager", /pitch.
 ---
 
 # Pitch Skill
@@ -19,36 +20,62 @@ description: >
 
 A narrative synthesis co-pilot that transforms strategic analysis into stories that make
 people want to be part of something. Not a slide generator. Not a summary of the strategy
-docs. The pitch takes rigorous strategy and translates it into emotional momentum.
+docs. The pitch is the outward-facing voice of all the analytical work — it takes rigorous
+strategy and translates it into emotional momentum.
 
 **The strategic question this answers:** "Why should anyone care about this?"
 
-**Distinct from other skills:** /business-strategy answers "is this a real opportunity?"
-with research. /brand-brief defines visual identity and voice. /gtm-strategy answers
-"who do we go after and how?" Pitch takes all of that and makes someone *feel it*.
+**Distinct from /business-strategy:** Strategy answers "is this a real opportunity?" with
+research and analysis. Pitch takes that answer and makes someone *feel it* in 3 minutes.
+
+**Distinct from /brand-brief:** Brand brief defines visual identity and voice. Pitch uses
+that voice to tell a specific story with a specific arc and a specific call to action.
+
+**Distinct from /gtm-strategy:** GTM answers "who do we go after and how?" Pitch borrows
+the beachhead story and the "why now" but wraps them in narrative, not a plan.
 
 The AI drives the narrative construction. The founder provides the raw conviction, shapes
-the story, and decides what's authentic. AI brings the framework and first draft; user
-refines the voice and signs off on what feels true.
+the story, and decides what's authentic. Pitch is collaborative: AI brings the framework
+and first draft; user refines the voice and signs off on what feels true.
 
 
 ## When to Invoke
 
-**Auto-trigger on:** "write the pitch", "pitch this", "create a pitch", "how do we tell
-this story?", "make people excited about this", "elevator pitch", "I need a one-pager",
-"I need something I can send to people", /pitch
+**Auto-trigger on:**
+
+Direct invocations:
+- "write the pitch", "create a pitch", "build the pitch"
+- "pitch this", "pitch narrative", "pitch page"
+- /pitch
+
+Narrative requests:
+- "how do we tell this story?"
+- "I need to explain this to someone"
+- "make people excited about this"
+- "what's the elevator pitch?"
+- "I need a one-pager"
+- "how do I talk about this?"
+
+Sharing triggers:
+- "I want to share this with [person/group]"
+- "someone asked what I'm working on"
+- "I need something I can send to people"
 
 **When NOT to invoke:**
 - User wants to refine strategy — that's /business-strategy
-- User wants competitive analysis — that's /competitive-landscape
-- Quick one-off explanation — just help them, don't run the full skill
+- User wants to build the site — that's /strategy-site
+- User wants competitive analysis or market research — that's /competitive-landscape
+- Quick one-off explanation in conversation — just help them, don't run the full skill
+
+**Also invoked via:** /pitch
+
 
 ## Auto-Trigger Behavior
 
 When this skill auto-triggers, confirm scope before diving in:
 
 > "Want me to build a pitch narrative for [project]? I'll pull from whatever strategy
-> artifacts exist, craft the story arc, and produce a narrative, a one-pager, and
+> artifacts exist, craft the story arc, and produce a narrative page, a one-pager, and
 > talking points. Who's the primary audience — investors, partners, community, or
 > general excitement?"
 
@@ -74,7 +101,9 @@ compelling vs. what needs work.
 
 Search for the project's strategy artifacts:
 
-`search_bits("[project name]")`
+```bash
+python3 scripts/query-bits.py --search "[project name]"
+```
 
 Look for:
 - Strategic Memo (the core bet, Onliness Statement, open questions)
@@ -93,13 +122,16 @@ missing so the founder knows what would strengthen the narrative later.
 
 The same core story flexes for different audiences. Ask (or infer from context):
 
-- **Technical community** — lead with the problem, prove with architecture. Avoid hand-waving.
-- **Potential partners** — lead with shared enemy / aligned mission. Avoid making it all about you.
-- **Family / non-technical** — lead with human impact. Use analogies. Avoid jargon.
-- **Investors** — lead with market shift + team conviction. Prove with data and traction.
-- **General / community** — lead with movement framing. Prove with shared values.
+| Audience | Lead With | Proof Layer | Avoid |
+|----------|-----------|-------------|-------|
+| Technical community | The problem (they'll validate the solution) | Architecture, approach, tradeoffs | Hand-waving over how it works |
+| Potential partners | Shared enemy / aligned mission | Traction, complementary strengths | Making it all about you |
+| Family / non-technical | The human impact — who benefits and how | Analogies, metaphors, concrete stories | Jargon, market size, technical specs |
+| Investors | Market shift + team conviction | Data, traction, scalable economics | Pure passion without evidence |
+| General / community | Movement framing — what we believe | Early believers, shared values | Corporate language, feature lists |
 
-Default to **General / community** if unclear — most broadly shareable.
+If the audience isn't clear, default to **General / community** — it's the most broadly
+shareable and can be narrowed later.
 
 ### Assess What's Compelling
 
@@ -204,20 +236,25 @@ Present the arc to the founder before writing:
 Go through every beat and apply these filters:
 
 **Replace abstractions with evidence.**
-"Growing market" → "47% of overlanding families bought a satellite communicator last year."
-"Strong team" → "Ex-[company], built [specific thing] that [specific outcome]."
+- "Growing market" → "47% of overlanding families bought a satellite communicator last year"
+- "Innovative technology" → "Meshtastic mesh radios that relay messages up to 10 miles between nodes"
+- "Strong team" → "Ex-[company], built [specific thing] that [specific outcome]"
 
 **Replace company language with movement language.**
-At pre-venture stage, movement framing outperforms corporate framing. "We believe families
-deserve to stay connected without depending on infrastructure" beats "Songbird is a product
-that provides off-grid communication." Movement language invites. Company language describes.
+At pre-venture stage, movement framing outperforms corporate framing:
+- ❌ "Songbird is a product that provides off-grid communication"
+- ✅ "We believe families deserve to stay connected without depending on infrastructure"
+
+Movement language invites. Company language describes. The pitch should invite.
 
 **Replace feature descriptions with capability stories.**
-"Your 12-year-old can text you from the bottom of a canyon. No cell tower needed." beats
-"256-bit encryption, 10-mile range, 72-hour battery."
+- ❌ "256-bit encryption, 10-mile range, 72-hour battery"
+- ✅ "Your 12-year-old can text you from the bottom of a canyon. No cell tower needed. The message hops from radio to radio until it finds you."
 
-**The Two-Sentence Test.** Can you say what this is and why it matters in two sentences
-a non-expert would understand and remember? If not, the pitch isn't sharp enough yet.
+**The Two-Sentence Test.**
+Can you say what this is and why it matters in two simple sentences that a non-expert
+would understand and remember? If not, the pitch isn't sharp enough yet. Refine until
+it passes.
 
 ### The Voice Pass
 
@@ -233,12 +270,18 @@ talking, or a company marketing? Rewrite anything that sounds corporate.
 
 ### The Honesty Beat
 
-Every great pitch includes a moment of radical honesty. Pull from the Strategic Memo's
-"Uncomfortable Truths," the Simulation's "Gap Log," or genuinely unresolved open questions.
+Every great pitch includes a moment of radical honesty. Pull from:
+- The Strategic Memo's "Uncomfortable Truths" section
+- The Simulation's "Gap Log" (CRITICAL-level gaps)
+- Open questions that are genuinely unresolved
 
-This is not weakness — it's the highest-credibility moment in the pitch. Frame it as:
-"We know [hard truth]. That's exactly why [this approach / this timing / this team]."
-The vulnerability leads directly into the strongest argument for why this will work.
+This is not weakness — it's the highest-credibility moment in the pitch. "Here's what
+could kill this" builds more trust than another slide of optimism.
+
+Frame it as: "We know [hard truth]. That's exactly why [this approach / this timing /
+this team]." The vulnerability leads directly into the strongest argument for why this
+will work despite the risk.
+
 
 ---
 
@@ -248,28 +291,78 @@ The vulnerability leads directly into the strongest argument for why this will w
 
 ### Primary Artifact: Narrative Document
 
-The primary output is a narrative document with section markers. This document is the
-source of truth — derivatives are generated from it.
+The primary output is a narrative document with scrollytelling section markers. This
+document is the source of truth — derivatives are generated from it.
 
-**Structure:** Header (title, date, audience, upstream artifact IDs), then sections:
-The Shift → The Stakes → The Vision → How We Get There → The Proof → The Honest
-Truth → The Invitation. Followed by ONE-PAGER and TALKING POINTS sections.
+**Structure:**
 
-Section names are flexible — adapt to the actual story. This is a starting scaffold,
-not a rigid template.
+```
+NARRATIVE: [Project Name] Pitch v[X.X]
+Date: [YYYY-MM-DD]
+Audience: [primary audience]
+Upstream artifacts: [list of bit IDs consumed]
 
-**Save as a bit.** Version it: v0.1 on first draft, bump on iteration.
+---
 
-`create_bit(type: note, project: [product-name], tags: pitch-narrative [product-name])`
+## The Shift
+[Beat 1-2: Name the change, establish stakes]
+
+## The Stakes
+[Beat 3-4: Winners and losers, tension]
+
+## The Vision
+[Beat 5-6: The Promised Land, vivid and specific]
+
+## How We Get There
+[Beat 7-8: The solution, framed as capability not feature]
+
+## The Proof
+[Beat 9-10: Evidence, traction, credibility]
+
+## The Honest Truth
+[Beat 11: Vulnerability + strength]
+
+## The Invitation
+[Beat 12: Call to action — what does "being part of this" look like?]
+
+---
+
+ONE-PAGER:
+[See below]
+
+TALKING POINTS:
+[See below]
+```
+
+Section names are flexible — adapt to the actual story. The structure above is a
+starting scaffold, not a rigid template.
+
+**Save as a bit** with the project tag. Version it: v0.1 on first draft, bump on
+iteration.
 
 ### Derivative 1: One-Pager
 
-A dense, shareable text block — the thing you paste in a text message or email when
-someone asks "what are you working on?" Structure: project name, two-sentence hook
-(the shift + promised land), one paragraph (what/who/why now, max 4 sentences), one
-line on the hard part, one line on status/next steps.
+A dense, shareable text block — the thing you paste in a text message, email, or Slack
+when someone asks "what are you working on?"
 
-**Target: under 150 words.** The one-pager gets used 10x more than the full narrative.
+**Structure:**
+
+```
+[PROJECT NAME]
+
+[Two-sentence hook — the shift + the promised land]
+
+[One paragraph: what it is, who it's for, why now — max 4 sentences]
+
+[One line: the honest truth / the hard part]
+
+[One line: where it stands / what's next]
+
+[Link to full narrative if strategy site exists]
+```
+
+**Target: under 150 words.** If it's longer, it's not a one-pager — it's a summary.
+The one-pager is the most-used derivative. It needs to work in a text message.
 
 ### Derivative 2: Talking Points (Tiered)
 
@@ -308,48 +401,126 @@ Present all three derivatives to the founder for review.
 
 ### The Five Tests
 
-1. **Two-Sentence Test.** Can you capture the entire pitch in two sentences? If they don't land, the pitch is muddled.
-2. **Cold Read Test.** Someone with zero context reads this. At which beat do they first feel something? If beat 5 or later, the opening is too slow.
-3. **Share Test.** Would you actually paste the one-pager in a text? If not, what's stopping you? Fix that.
-4. **"So What" Test.** Does the audience know what to do after reading? The pitch should end with an invitation, not a period.
-5. **Authenticity Test.** Does it sound like the founder on their best day, or like a marketing department? Flag anything performative.
+Run each test and report results honestly:
+
+**1. The Two-Sentence Test.**
+Can you capture the entire pitch in two sentences? Write them. If they don't land,
+the pitch is muddled.
+
+**2. The Cold Read Test.**
+Imagine someone with zero context reading this for the first time. At which beat do
+they first feel something? If it's beat 5 or later, the opening is too slow.
+
+**3. The Share Test.**
+Would you actually send this link to someone? Would you paste the one-pager in a text?
+If not, what's stopping you? Fix that.
+
+**4. The "So What" Test.**
+After reading, does the audience know what to do? Is there a clear next step? The pitch
+should end with an invitation, not a period.
+
+**5. The Authenticity Test.**
+Read the pitch against the founder's actual voice. Does it sound like them on their
+best day, or like a marketing department? Flag anything that feels performative.
 
 ### Report
 
-Present results for all five tests with pass/needs-work and specific recommendations.
-If all five pass, the pitch is ready. If not, iterate on the failures before publishing.
+Present the stress test results:
+
+> "Here's how the pitch performs:
+> - Two-sentence: [pass/needs work — the two sentences]
+> - Cold read: [emotional hook hits at beat N]
+> - Share test: [would/wouldn't share because...]
+> - So what: [clear/unclear next step]
+> - Authenticity: [sounds like founder / sounds corporate]
+>
+> Recommendations: [specific fixes if any test fails]"
+
+If all five pass, the pitch is ready. If not, iterate on the specific failures before
+publishing.
 
 
 ---
 
 ## Connection to Other Skills
 
-**Inputs from upstream:**
-- /business-strategy → The Shift, Onliness Statement, Core Bet, Uncomfortable Truths
-- /persona → Who this is for (in their language), the pain, the identity hook
-- /gtm-strategy → The beachhead story, the "why now," the first customers
-- /brand-brief → Voice, tone, visual direction, "This NOT That" pairs
-- /pricing-strategy → Pricing narrative, SKU framing
-- /competitive-landscape → The open space, what exists, what's missing
-- /simulate → Stress-tested claims, gap log, proof of rigorous thinking
+### Inputs From Upstream
 
-**Not all inputs need to exist.** Strategic Memo only = vision-forward, light on proof.
-Add Personas = human-centered. Add GTM = story-complete. Full stack = maximum credibility.
+| Skill | What it provides to Pitch |
+|-------|--------------------------|
+| /business-strategy | The Shift, Onliness Statement, Core Bet, Uncomfortable Truths |
+| /persona | Who this is for (in their language), the pain, the identity hook |
+| /gtm-strategy | The beachhead story, the "why now," the first customers |
+| /brand-brief | Voice, tone, visual direction, "This NOT That" pairs |
+| /pricing-strategy | Pricing narrative, SKU framing, "what the price says about us" |
+| /competitive-landscape | The open space, what exists, what's missing |
+| /simulate | Stress-tested claims, gap log, proof of rigorous thinking |
 
-**Outputs to downstream:** /simulate can pressure-test pitch claims. The founder gets
-a one-pager for texting and talking points for conversations.
+**Not all inputs need to exist.** The pitch adapts to whatever's available:
+
+| Available artifacts | Pitch character |
+|--------------------|-----------------|
+| Strategic Memo only | Vision-forward, light on proof, flags what's missing |
+| Memo + Personas | Human-centered, specific about who and why |
+| Memo + Personas + GTM | Story-complete with beachhead and "why now" |
+| Full stack | Maximum credibility — every claim has backing |
+
+### Outputs to Downstream
+
+| Consumer | What Pitch provides |
+|----------|-------------------|
+| /strategy-site | Primary narrative with section markers → becomes site front door |
+| /simulate | Pitch claims → can be pressure-tested ("does this story survive contact?") |
+| The founder | One-pager for texting, talking points for conversations |
+
+### Handoff to /strategy-site
+
+When the pitch is complete and the user wants to publish:
+
+> "The pitch narrative is ready. Want me to invoke /strategy-site to publish it?
+> It'll become the front door of the strategy site, with the strategy docs
+> accessible via navigation."
+
+Do NOT invoke /strategy-site automatically. The user decides when to publish.
 
 
 ---
 
 ## Key Behaviors
 
-- **Movement language over company language.** "We believe" outperforms "we provide." The pitch should make the audience want to join something, not evaluate a product.
-- **The shift is the foundation, not the product.** If the audience doesn't feel the shift first, nothing else lands. Spend disproportionate time getting the shift right.
-- **Specificity is the antidote to generic.** Include details only someone who understands the problem would know. Concrete numbers, specific communities, real friction points.
-- **The honesty beat is the highest-leverage section.** Acknowledging risks builds more credibility than 100% optimism. Its absence signals naivety or evasion.
-- **Excitement is contagious, but only when authentic.** Channel the founder's genuine enthusiasm. If they aren't excited about an angle, find what they ARE excited about.
-- **Never summarize the strategy docs.** The pitch is a transformation, not an abridgment.
-- **The one-pager is the workhorse.** Most pitch communication happens in texts and emails. Invest proportional effort.
-- **Works with whatever exists.** Don't block on missing artifacts. Name what's missing, produce the best pitch from what's available, move on.
-- **Version the narrative.** v0.1 on first draft. Each refinement round bumps the version.
+**Movement language over company language.** At pre-venture and early stage, "we believe"
+outperforms "we provide." Invitations outperform descriptions. The pitch should make the
+audience want to join something, not evaluate a product.
+
+**The shift is the foundation, not the product.** If the audience doesn't feel the shift
+first, nothing else lands. The product is only interesting in the context of a world that
+just changed. Spend disproportionate time on getting the shift right.
+
+**Specificity is the antidote to generic.** Every AI-generated pitch in the world says
+"innovative solution for a growing market." The way to not sound like that is to include
+details that only someone who actually understands the problem would know. Concrete numbers,
+specific communities, real friction points, named alternatives.
+
+**The honesty beat is the highest-leverage section.** A pitch that acknowledges its own
+risks builds more credibility than one that's 100% optimistic. Experienced audiences
+(investors, partners, technical communities) actively look for this. Its absence signals
+either naivety or evasion.
+
+**Excitement is contagious, but only when authentic.** The pitch should channel the
+founder's genuine enthusiasm, not manufacture it. If the founder isn't excited about a
+particular angle, don't force it — find what they ARE excited about and build from there.
+
+**Never summarize the strategy docs.** The pitch is a transformation, not an abridgment.
+It takes the same raw material and reshapes it for emotional impact. If a section reads
+like a summary of the Strategic Memo, rewrite it as narrative.
+
+**The one-pager is the workhorse.** Most pitch communication happens in text messages and
+emails, not presentations. The one-pager gets used 10x more than the full narrative.
+Invest proportional effort.
+
+**Works with whatever exists.** Don't block on missing artifacts. Name what would make the
+pitch stronger, produce the best pitch possible from what's available, and move on. The
+pitch can always be versioned up when more strategy work is done.
+
+**Version the narrative.** v0.1 is the first draft. Each round of founder refinement bumps
+the version. Save each version as a bit so the evolution is traceable.
