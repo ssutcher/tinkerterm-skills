@@ -1,17 +1,11 @@
 ---
 name: pitch
 description: >
-  Narrative synthesis co-pilot that transforms strategy artifacts into compelling stories
-  that make people excited about an idea. Consumes whatever upstream strategy outputs exist
-  (Strategic Memo, Personas, GTM Plan, Brand Brief, Pricing, Simulations) and synthesizes
-  a pitch narrative using Raskin's strategic narrative framework and Duarte's sparkline
-  emotional pacing. Produces three artifacts: a primary scrollytelling narrative (with
-  section markers for strategy-site rendering), a shareable one-pager, and tiered talking
-  points (30s / 3min / 10min). Works with whatever exists — a pitch from just a Strategic
-  Memo is still a pitch. The skill's job is to answer "why should anyone care about this?"
-  Triggers on: "write the pitch", "pitch this", "make people excited about this",
-  "create a pitch", "write the narrative", "how do we tell this story", "I need to
-  explain this to someone", "elevator pitch", "one-pager", /pitch.
+  Narrative synthesis co-pilot that turns strategy artifacts into stories that make people
+  excited. Pulls in whatever upstream strategy outputs exist (memo, personas, GTM plan,
+  brand brief, pricing) and produces three things: a scrollytelling narrative, a shareable
+  one-pager, and tiered talking points (30s / 3min / 10min). Use when writing a pitch, an
+  elevator pitch, a one-pager, or figuring out how to tell the story.
 ---
 
 # Pitch Skill

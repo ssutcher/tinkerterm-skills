@@ -13,7 +13,7 @@
     {
       "id": "brand-naming",
       "name": "Brand Naming",
-      "description": "Research-backed brand naming co-pilot. Generates name candidates using 5 creative lenses, evaluates against Neumeier's 7 criteria and trademark distinctiveness spectrum, and produces a shortlist with domain strategy. Use when naming a product, company, feature, or project.",
+      "description": "Research-backed brand naming co-pilot for companies, products, and features. Generates candidates through five creative lenses (archetype, phonetic, competitive gap, metaphor, wild card), evaluates against trademark distinctiveness and domain strategy, and produces a shortlist with rationale and tagline drafts. Use when naming a product, company, feature, or project — or when the user asks \"what should we call this.\"",
       "version": "2.0.0",
       "changelog": "Major rewrite with 5 creative lenses, Neumeier evaluation rubric, and domain strategy",
       "category": "creative",
@@ -49,7 +49,7 @@
     {
       "id": "design-luxury",
       "name": "Design: Luxury",
-      "description": "Design system guidelines for the Luxury style \u2014 modern, bold, big headings, dark surface with white text, Oswald typeface. Use when building UI in the luxury style.",
+      "description": "Modern, bold visual style with big headings, a dark surface, white text, and Oswald typeface. Use when building UI in a luxury feel or when the user asks for the luxury design system.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -58,7 +58,7 @@
     {
       "id": "design-refined",
       "name": "Design: Refined",
-      "description": "Design system guidelines for the Refined style \u2014 modern, minimal, clean white surface with Playfair Display typeface and blue/purple accents. Use when building UI in the refined style.",
+      "description": "Modern, minimal visual style with a clean white surface, Playfair Display typeface, and blue/purple accents. Use when building UI in a refined feel or when the user asks for the refined design system.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -67,7 +67,7 @@
     {
       "id": "design-dramatic",
       "name": "Design: Dramatic",
-      "description": "Design system guidelines for the Dramatic style \u2014 high-contrast, bold, theatrical. Near-black surface with purple and rose accents, Outfit typeface. Use when building theatrical, immersive UI.",
+      "description": "High-contrast, theatrical visual style with a near-black surface, purple and rose accents, and Outfit typeface. Use when building UI in a dramatic, immersive feel or when the user asks for the dramatic design system.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -76,7 +76,7 @@
     {
       "id": "design-bold",
       "name": "Design: Bold",
-      "description": "Design system guidelines for the Bold style \u2014 heavy weight, impactful, dark surface with blue and green accents, Archivo Black typeface. Use when building high-impact UI.",
+      "description": "Heavy, high-impact visual style with a dark surface, blue and green accents, and Archivo Black typeface. Use when building UI in a bold, attention-grabbing feel or when the user asks for the bold design system.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -85,7 +85,7 @@
     {
       "id": "design-bento",
       "name": "Design: Bento",
-      "description": "Design system guidelines for the Bento style \u2014 grid-based layout with content in blocks of varying sizes, warm peach and beige tones, Inter typeface. Use when building bento grid layouts.",
+      "description": "Grid-based visual style with content in bento-box blocks of varying sizes, warm peach and beige tones, and Inter typeface. Use when building bento grid layouts or UI with a warm, modular feel.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -94,7 +94,7 @@
     {
       "id": "design-neobrutalism",
       "name": "Design: Neobrutalism",
-      "description": "Design system guidelines for the Neobrutalism style \u2014 raw, high-contrast, bold borders, yellow and deep blue accents on a light surface. Use when building brutalist-inspired UI.",
+      "description": "Raw, high-contrast visual style with bold borders, yellow and deep blue accents on a light surface, and Inter typeface. Use when building neobrutalist UI or when the user asks for the neobrutalism design system.",
       "version": "1.1.0",
       "changelog": "Added design tokens, color palette, and component specs",
       "category": "design",
@@ -103,7 +103,7 @@
     {
       "id": "business-strategy",
       "name": "Business Strategy",
-      "description": "Research-backed strategic co-pilot for startup ideas. Runs parallel research across market, competition, customer, business model, and GTM \u2014 synthesizes into an opinionated strategic memo with explicit bets and direction. Use when evaluating a new idea, validating a market, or building a go-to-market strategy from scratch.",
+      "description": "Research-backed strategic co-pilot for a startup idea. Runs parallel research across market, competition, customer, business model, and GTM, then writes an opinionated memo with explicit bets and open questions. Use when evaluating a new idea, validating a market, building a strategy from scratch, or when the user shares an idea and asks \"what do you think.\"",
       "version": "1.2.0",
       "changelog": "Substantial expansion of research-and-synthesis workflow; sharper opinionated memo template with explicit bets.",
       "category": "strategy",
@@ -121,7 +121,7 @@
     {
       "id": "pricing-strategy",
       "name": "Pricing Strategy",
-      "description": "Research-backed pricing co-pilot for early-stage products. Runs parallel research across competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence \u2014 synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model, and pricing narrative.",
+      "description": "Research-backed pricing co-pilot for early-stage hardware and software products. Runs parallel research across competitive price maps, willingness-to-pay signals, cost benchmarks, and demand-side evidence, then writes a pricing plan with a recommended price, tier structure, and customer-facing narrative. Use when figuring out what to charge, picking a pricing model, or answering \"what's the right price.\"",
       "version": "1.2.0",
       "changelog": "Expanded WTP/COGS/demand research stages; richer SKU architecture and pricing-narrative output.",
       "category": "strategy",
@@ -130,7 +130,7 @@
     {
       "id": "gtm-strategy",
       "name": "GTM Strategy",
-      "description": "Research-backed go-to-market co-pilot for early-stage startups (0\u2013$1M ARR). Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence \u2014 synthesizes into an opinionated GTM Plan with a sequenced first-100-customers plan.",
+      "description": "Research-backed go-to-market co-pilot for early-stage startups. Runs parallel research across beachhead selection, competitive GTM, first-customer patterns, and channel intelligence, then writes an opinionated GTM plan with a specific motion, channel bets, and a sequenced first-100-customers plan. Use when figuring out how to get first customers, picking a sales motion, or building a go-to-market from scratch.",
       "version": "1.2.0",
       "changelog": "Expanded beachhead/competitive-GTM/first-customer/channel research; tighter first-100-customers sequencing.",
       "category": "strategy",
@@ -139,7 +139,7 @@
     {
       "id": "simulate",
       "name": "GTM Simulator",
-      "description": "GTM and business simulation engine. Takes a GTM plan, persona bits, and brand brief and runs a time-horizon simulation \u2014 making plan actions concrete, modeling realistic market responses, tracing persona journeys, and surfacing gaps and broken assumptions in a structured Findings Report.",
+      "description": "GTM and business simulation engine. Takes a GTM plan, personas, and brand brief, then runs a time-horizon simulation that makes plan actions concrete, models realistic market responses, and surfaces gaps and broken assumptions. Delivers a findings report with metric scorecard, assumption tracker, and recommendations. Use when stress-testing a plan, simulating year 1, or asking \"what would actually happen if.\"",
       "version": "1.2.0",
       "changelog": "Tightened branch-comparison and findings-report structure; clearer assumption tracker.",
       "category": "strategy",
@@ -148,7 +148,7 @@
     {
       "id": "competitive-landscape",
       "name": "Competitive Landscape",
-      "description": "Research-backed competitive landscape analysis. Runs parallel research across market players, positioning, product intelligence, momentum signals, and customer voice \u2014 synthesizes into a Competitive Landscape Brief with positioning maps, threat scorecards, open space analysis, and moat assessment.",
+      "description": "Research-backed competitive landscape analysis for new markets, products, and ventures. Runs parallel research across market players, positioning, product intelligence, momentum signals, and customer voice, then writes a brief with positioning maps, threat scorecards, open-space analysis, and moat assessment. Use when mapping competition for a new venture, refreshing an existing analysis, or asking \"who else is doing this.\"",
       "version": "1.1.0",
       "changelog": "Major expansion: deeper parallel research (players, positioning, momentum signals, customer voice), richer threat scorecards and moat assessment, expanded synthesis stage.",
       "category": "strategy",
@@ -175,7 +175,7 @@
     {
       "id": "pitch",
       "name": "Pitch",
-      "description": "Narrative synthesis co-pilot that transforms strategy artifacts into compelling stories. Uses Raskin's strategic narrative framework and Duarte's sparkline emotional pacing. Produces a narrative page, shareable one-pager, and tiered talking points (30s / 3min / 10min).",
+      "description": "Narrative synthesis co-pilot that turns strategy artifacts into stories that make people excited. Pulls in whatever upstream strategy outputs exist (memo, personas, GTM plan, brand brief, pricing) and produces three things: a scrollytelling narrative, a shareable one-pager, and tiered talking points (30s / 3min / 10min). Use when writing a pitch, an elevator pitch, a one-pager, or figuring out how to tell the story.",
       "version": "1.1.0",
       "changelog": "Expanded Raskin + Duarte synthesis stages; richer one-pager and tiered talking-points output.",
       "category": "strategy",
@@ -211,7 +211,7 @@
     {
       "id": "design-inspiration",
       "name": "Design Inspiration",
-      "description": "Find real-world design inspiration for websites, apps, and UI patterns. Searches, curates, and analyzes 5-8 examples with actionable 'steal this' notes and cross-cutting pattern analysis. Generates an interactive dark-themed gallery HTML page with tag filtering and lightbox. Captures desktop and mobile screenshots with Playwright if available.",
+      "description": "Find real-world design inspiration for websites, apps, and UI patterns. Searches and curates 5-8 examples with \"steal this\" notes and cross-cutting pattern analysis, then generates a dark-themed gallery page with desktop + mobile screenshots. Use when looking for design references for a pattern you're building — pricing pages, dashboards, event cards, landing pages, navigation, portfolios.",
       "version": "1.2.0",
       "changelog": "Refined gallery generation and pattern-analysis output.",
       "category": "creative",
@@ -229,7 +229,7 @@
     {
       "id": "publish-skill",
       "name": "Publish Skill",
-      "description": "Publish one or more skills to the TinkerTerm public skill catalog on GitHub. Use when the user wants to add a skill to the TinkerTerm Library so it appears in the app's Browse Catalog modal. Triggers on \"add to catalog\", \"publish this skill\", \"push to the skill catalog\", \"add to TinkerTerm Library\", \"publish to catalog\".",
+      "description": "Publish one or more skills to the public Tink Library catalog on GitHub. The catalog is consumed by Tink Tools, TinkerTerm, and T2 (TinkChat) — once pushed, the skill appears in every consumer. Use when the user wants to add a skill to the catalog, publish a skill, or \"push this to Tink Library.\"",
       "version": "1.0.0",
       "category": "development",
       "dir": "skills/publish-skill/",

@@ -1,11 +1,9 @@
 ---
 name: design-refined
 description: >
-  Design system guidelines for the Refined visual style: modern, minimal,
-  clean white surface with Playfair Display typeface and blue/purple accents.
-  Use when building UI in the refined style or when asked to apply refined
-  design system rules. Triggers on "refined style", "refined design",
-  "refined design system", "use refined", "build in refined".
+  Modern, minimal visual style with a clean white surface, Playfair Display typeface,
+  and blue/purple accents. Use when building UI in a refined feel or when the user
+  asks for the refined design system.
 ---
 
 # Refined Design System

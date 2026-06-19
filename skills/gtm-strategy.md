@@ -1,15 +1,11 @@
 ---
 name: gtm-strategy
 description: >
-  Research-backed go-to-market co-pilot for early-stage startups (0–$1M ARR). Takes a
-  Strategic Memo (or gathers inputs from scratch), runs parallel research agents across
-  beachhead selection, competitive GTM, first-customer patterns, sales motion validation,
-  and channel intelligence — then synthesizes into an opinionated GTM Plan with a specific
-  motion, channel bets, and a sequenced first-100-customers plan.
-  Triggers on: "how do we get first customers", "what's our go-to-market", "let's do GTM
-  strategy", "who do we go after first", "how do we launch this", "what's our sales motion",
-  "go to market strategy", "how do we find first customers", "let's figure out GTM",
-  /gtm-strategy.
+  Research-backed go-to-market co-pilot for early-stage startups. Runs parallel research
+  across beachhead selection, competitive GTM, first-customer patterns, and channel
+  intelligence, then writes an opinionated GTM plan with a specific motion, channel bets,
+  and a sequenced first-100-customers plan. Use when figuring out how to get first
+  customers, picking a sales motion, or building a go-to-market from scratch.
 ---
 
 # GTM Strategy Skill

@@ -1,15 +1,11 @@
 ---
 name: brand-naming
 description: >
-  Research-backed brand naming co-pilot for companies, products, and features. Takes a
-  Strategic Memo and/or naming brief as inputs, generates candidates through structured
-  lenses (archetype, phonetic, competitive gap, metaphor, wild card), and evaluates
-  against Neumeier's 7 criteria, trademark distinctiveness spectrum, and domain strategy
-  — then produces a shortlist with full rationale, name stories, and tagline drafts.
-  Sits in the strategy stack between /business-strategy and /brand-brief.
-  Triggers on: "name this", "what should we call it", "naming strategy", "brand name",
-  "product name", "company name", "let's name", "come up with names", "naming session",
-  "help me name", "name for our", "what's a good name", /brand-naming.
+  Research-backed brand naming co-pilot for companies, products, and features. Generates
+  candidates through five creative lenses (archetype, phonetic, competitive gap, metaphor,
+  wild card), evaluates against trademark distinctiveness and domain strategy, and produces
+  a shortlist with rationale and tagline drafts. Use when naming a product, company,
+  feature, or project — or when the user asks "what should we call this."
 ---
 
 # Brand Naming Skill

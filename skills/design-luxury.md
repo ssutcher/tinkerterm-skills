@@ -1,11 +1,9 @@
 ---
 name: design-luxury
 description: >
-  Design system guidelines for the Luxury visual style: modern, bold, big
-  headings, dark surface with white text, Oswald typeface. Use when building
-  UI in the luxury style or when asked to apply luxury design system rules.
-  Triggers on "luxury style", "luxury design", "luxury design system",
-  "use luxury", "build in luxury".
+  Modern, bold visual style with big headings, a dark surface, white text, and
+  Oswald typeface. Use when building UI in a luxury feel or when the user asks
+  for the luxury design system.
 ---
 
 # Luxury Design System

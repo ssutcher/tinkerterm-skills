@@ -1,13 +1,11 @@
 ---
 name: business-strategy
 description: >
-  Research-backed strategic co-pilot for new startup ideas. Runs parallel research agents
-  across market, competition, customer, business model, and GTM — then synthesizes into
-  an opinionated strategic memo with explicit bets, open questions, and direction.
-  Auto-triggers on direct invocations ("create a business strategy", "build a strategy",
-  "run a strategy on this", "I want a strategy for X") and on idea-sharing ("what do you
-  think about this idea", "I'm thinking of building X", "is there a market for X",
-  "should I pursue this", or similar). Also user-invocable via /business-strategy.
+  Research-backed strategic co-pilot for a startup idea. Runs parallel research across
+  market, competition, customer, business model, and GTM, then writes an opinionated
+  memo with explicit bets and open questions. Use when evaluating a new idea, validating
+  a market, building a strategy from scratch, or when the user shares an idea and asks
+  "what do you think."
 ---
 
 # Business Strategy Skill

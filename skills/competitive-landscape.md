@@ -2,14 +2,10 @@
 name: competitive-landscape
 description: >
   Research-backed competitive landscape analysis for new markets, products, and ventures.
-  Runs parallel research agents across market players, positioning, product intelligence,
-  momentum signals, and customer voice — then synthesizes into a Competitive Landscape Brief
-  with positioning maps, threat scorecards, open space analysis, and moat assessment.
-  Standalone skill that feeds /business-strategy, /persona, /pricing-strategy, and /gtm-strategy.
-  Three modes: discovery (new market), focused (specific product context), refresh (update
-  existing analysis). Triggers on: "who are the competitors", "competitive landscape",
-  "competitive analysis", "who else is doing this", "what's the competition", "map the market",
-  "who are we up against", "what does the competitive landscape look like", /competitive-landscape.
+  Runs parallel research across market players, positioning, product intelligence, momentum
+  signals, and customer voice, then writes a brief with positioning maps, threat scorecards,
+  open-space analysis, and moat assessment. Use when mapping competition for a new venture,
+  refreshing an existing analysis, or asking "who else is doing this."
 ---
 
 > **CLI note:** `create_bit` and `search_bits` references in this skill use `python3 scripts/tterm-tool-client.py <tool> '<args_json>'` when running in Claude Code CLI. In Tink chat they're available natively.

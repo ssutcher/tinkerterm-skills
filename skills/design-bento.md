@@ -1,11 +1,9 @@
 ---
 name: design-bento
 description: >
-  Design system guidelines for the Bento visual style: grid-based layout with
-  content in blocks of varying sizes, warm peach and beige tones, Inter typeface.
-  Use when building UI in the bento style or when asked to apply bento design
-  system rules. Triggers on "bento style", "bento design", "bento design system",
-  "bento grid", "use bento", "build in bento".
+  Grid-based visual style with content in bento-box blocks of varying sizes, warm
+  peach and beige tones, and Inter typeface. Use when building bento grid layouts
+  or UI with a warm, modular feel.
 ---
 
 # Bento Design System

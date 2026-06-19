@@ -1,11 +1,11 @@
 ---
 name: design-inspiration
 description: >
-  Find real-world design inspiration for websites, apps, and UI patterns.
-  Use when the user wants examples of how other sites handle a specific design
-  problem — event cards, pricing pages, dashboards, portfolios, landing pages,
-  navigation patterns, etc. Triggers on "inspiration", "inspo", "examples of",
-  "show me sites", "how do other apps handle", "design reference", "find me websites like".
+  Find real-world design inspiration for websites, apps, and UI patterns. Searches and
+  curates 5-8 examples with "steal this" notes and cross-cutting pattern analysis, then
+  generates a dark-themed gallery page with desktop + mobile screenshots. Use when looking
+  for design references for a pattern you're building — pricing pages, dashboards, event
+  cards, landing pages, navigation, portfolios.
 ---
 
 # Design Inspiration Finder

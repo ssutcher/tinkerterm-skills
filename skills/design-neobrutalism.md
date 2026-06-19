@@ -1,11 +1,9 @@
 ---
 name: design-neobrutalism
 description: >
-  Design system guidelines for the Neobrutalism visual style: raw, high-contrast,
-  bold borders, yellow and deep blue accents on a light surface, Inter typeface.
-  Use when building UI in the neobrutalist style or when asked to apply
-  neobrutalism design system rules. Triggers on "neobrutalism", "neobrutalist",
-  "neo brutalism", "brutalist design", "use neobrutalism", "build in neobrutalism".
+  Raw, high-contrast visual style with bold borders, yellow and deep blue accents on
+  a light surface, and Inter typeface. Use when building neobrutalist UI or when the
+  user asks for the neobrutalism design system.
 ---
 
 <!-- TYPEUI_SH_MANAGED_START -->

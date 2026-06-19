@@ -1,15 +1,11 @@
 ---
 name: simulate
 description: >
-  GTM and business simulation engine. Takes a GTM plan, persona files, and brand brief
-  and runs a time-horizon simulation — making plan actions concrete, modeling realistic
-  market responses, tracing persona journeys, surfacing gaps and broken assumptions.
-  Runs two branches at key dependencies (e.g., disaster event / no disaster event).
-  Outputs a Simulation Brief (pre-run inputs), saves full narrative to bit, then
-  delivers a Findings Report (TLDR, branch comparison, metric scorecard, gap log,
-  assumption tracker, recommendations). Findings lead. Narrative is reference.
-  Triggers on: "simulate the GTM plan", "run a simulation", "stress test the plan",
-  "play this out", "what would actually happen if", "simulate year 1", /simulate.
+  GTM and business simulation engine. Takes a GTM plan, personas, and brand brief, then
+  runs a time-horizon simulation that makes plan actions concrete, models realistic market
+  responses, and surfaces gaps and broken assumptions. Delivers a findings report with
+  metric scorecard, assumption tracker, and recommendations. Use when stress-testing a
+  plan, simulating year 1, or asking "what would actually happen if."
 ---
 
 # Simulate Skill

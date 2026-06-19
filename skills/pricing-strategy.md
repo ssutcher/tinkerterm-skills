@@ -1,15 +1,11 @@
 ---
 name: pricing-strategy
 description: >
-  Research-backed pricing co-pilot for early-stage hardware and software products. Takes
-  a Strategic Memo and/or persona files as inputs, runs parallel research agents across
-  competitive price maps, WTP signals, COGS benchmarks, and demand-side evidence — then
-  synthesizes into a Pricing Plan with a recommended price, SKU architecture, margin model,
-  and consumer-facing pricing narrative. Sits in the strategy stack between /business-strategy
-  and /gtm-strategy.
-  Triggers on: "what should we charge", "how do we price this", "what's our pricing strategy",
-  "pricing model", "what price point", "how do we think about pricing", "what's the right
-  price", "let's figure out pricing", /pricing-strategy.
+  Research-backed pricing co-pilot for early-stage hardware and software products. Runs
+  parallel research across competitive price maps, willingness-to-pay signals, cost
+  benchmarks, and demand-side evidence, then writes a pricing plan with a recommended
+  price, tier structure, and customer-facing narrative. Use when figuring out what to
+  charge, picking a pricing model, or answering "what's the right price."
 ---
 
 # Pricing Strategy Skill

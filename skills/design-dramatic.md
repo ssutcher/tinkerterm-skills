@@ -1,11 +1,9 @@
 ---
 name: design-dramatic
 description: >
-  Design system guidelines for the Dramatic visual style: high-contrast,
-  bold, theatrical. Near-black surface with purple and rose accents, Outfit
-  typeface. Use when building UI in the dramatic style or when asked to apply
-  dramatic design system rules. Triggers on "dramatic style", "dramatic design",
-  "dramatic design system", "use dramatic", "build in dramatic".
+  High-contrast, theatrical visual style with a near-black surface, purple and rose
+  accents, and Outfit typeface. Use when building UI in a dramatic, immersive feel
+  or when the user asks for the dramatic design system.
 ---
 
 # Dramatic Design System

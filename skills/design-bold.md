@@ -1,11 +1,9 @@
 ---
 name: design-bold
 description: >
-  Design system guidelines for the Bold visual style: heavy weight, impactful,
-  dark surface with blue and green accents, Archivo Black typeface. Use when
-  building UI in the bold style or when asked to apply bold design system rules.
-  Triggers on "bold style", "bold design", "bold design system", "use bold",
-  "build in bold".
+  Heavy, high-impact visual style with a dark surface, blue and green accents, and
+  Archivo Black typeface. Use when building UI in a bold, attention-grabbing feel
+  or when the user asks for the bold design system.
 ---
 
 # Bold Design System

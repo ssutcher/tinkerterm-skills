@@ -1,17 +1,17 @@
 ---
 name: publish-skill
 description: >
-  Publish one or more skills to the TinkerTerm public skill catalog on GitHub.
-  Use when the user wants to add a skill to the TinkerTerm Library so it appears
-  in the app's Browse Catalog modal. Triggers on "add to catalog", "publish this
-  skill", "push to the skill catalog", "add to TinkerTerm Library", "publish to catalog".
+  Publish one or more skills to the public Tink Library catalog on GitHub. The catalog is
+  consumed by Tink Tools, TinkerTerm, and T2 (TinkChat) — once pushed, the skill appears in
+  every consumer. Use when the user wants to add a skill to the catalog, publish a skill,
+  or "push this to Tink Library."
 ---
 
-# Publish Skill to TinkerTerm Catalog
+# Publish Skill to the Tink Library Catalog
 
 ## What This Does
 
-Adds skills to the public TinkerTerm skill catalog hosted at `github.com/ssutcher/tinkerterm-skills`. Once pushed, skills appear in the TinkerTerm Library modal and can be installed by any TinkerTerm user.
+Adds skills to the public Tink Library catalog hosted at `github.com/ssutcher/tinkerterm-skills` (repo name preserved for backwards compat). Once pushed, skills appear in **Tink Tools**' Library browser, **TinkerTerm**'s catalog browser, and **T2 (TinkChat)** — and can be installed by any consumer.
 
 ## The Repo
 
@@ -144,6 +144,8 @@ cd ~/TinkerBot/t2/bot && source .venv/bin/activate && \
 This fetches the updated catalog from GitHub and upserts all skills into Supabase. The live bot picks up new skills immediately (no restart needed — `list_skills` queries Supabase live).
 
 ### Step 8: Tell the User How to See It
+
+**Tink Tools:** Click the ↻ refresh button in the popover header. New skills appear in the Library browser (tap `+` → Browse Tink library).
 
 **TinkerTerm:** Close and reopen the Library modal. The catalog is fetched fresh every time the modal opens — no app restart needed.
 
